@@ -1,113 +1,224 @@
 html {
-    background-color: black;
+  background-color: black;
 }
 
 body {
-    margin: 0;
-    padding: 0 0 600px 0;
-    overflow-x: hidden;
-    font-family: 'Caveat', cursive;
-    font-size: 16pt;
-    background: linear-gradient(180deg, rgba(2,0,36,0) 100vh, rgba(255,255,255,.5) 200vh, rgba(255,255,255,.5) 100%);
+  margin: 0;
+  padding: 0 0 600px 0;
+  overflow-x: hidden;
+  font-family: "Caveat", cursive;
+  font-size: 16pt;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 0) 100vh,
+    rgba(255, 255, 255, 0.5) 200vh,
+    rgba(255, 255, 255, 0.5) 100%
+  );
 }
 
 /* ----- HELPING CLASSES ----- */
 
 .center {
-    /* Positions box in the middle of the page*/
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
+  /* Positions box in the middle of the page*/
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 .paper {
-    background-color: palegoldenrod;
-    padding: 50px;
-    border-radius: 3px;
+  background-color: palegoldenrod;
+  padding: 50px;
+  border-radius: 3px;
 }
-
 
 /* ----- SPLASH VIDEO ----- */
 
 .background_video {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    z-index: -1;
-    object-fit: cover;
-    opacity: .5;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+  object-fit: cover;
+  opacity: 0.5;
 }
 
 .headline {
-    /*background-color: rgba(0, 0, 0, 0.5);*/
-    padding: 50px;
-    color: white;
-    font-size: 4rem;
-    width: fit-content;
-    border-radius: 3px;
-    text-align: center;
-    font-family: sans-serif;
-
+  /*background-color: rgba(0, 0, 0, 0.5);*/
+  padding: 50px;
+  color: white;
+  font-size: 4rem;
+  width: fit-content;
+  border-radius: 3px;
+  text-align: center;
+  font-family: sans-serif;
 }
 
 .section_container {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
 }
 .book {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding-bottom: 400px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 400px;
 }
 
 .timeline_item {
-    display: flex;
-    margin: 10px 0;
+  display: flex;
+  margin: 10px 0;
 }
 .fatality_item {
-    display: flex;
-    margin: 10px 0;
-    justify-content: space-between;
+  display: flex;
+  margin: 10px 0;
+  justify-content: space-between;
 }
 
 .timeline_name {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .timeline_icon {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 /* ----- INFOBOX ----- */
 
 .infobox {
-    width: 400px;
-    height: 0;
-    display: none;
+  width: 400px;
+  height: 0;
+  display: none;
 }
 
 .infobox_image_container {
-    overflow: hidden;
-    animation-name: slide_in_kf;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
+  overflow: hidden;
+  animation-name: slide_in_kf;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes slide_in_kf {
-    0% {
-        width: 0;
-    }
+  0% {
+    width: 0;
+  }
 
-    100% {
-        width: 100%;
-    }
+  100% {
+    width: 100%;
+  }
 }
 
 .infobox_name {
-    text-align: center;
-    font-weight: 700;
+  margin-top: -50px;
+  margin-bottom: -30px;
+  text-align: center;
+}
+
+/******** Handwriting Animation **********/
+
+@keyframes write {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+#L1 {
+  stroke-dasharray: 350;
+  stroke-dashoffset: 350;
+  animation: write 0.2s linear forwards;
+}
+#I_1 {
+  stroke-dasharray: 350;
+  stroke-dashoffset: 350;
+  animation: write 0.2s linear forwards 0.4s;
+}
+#I_2 {
+  stroke-dasharray: 350;
+  stroke-dashoffset: 350;
+  animation: write 0.2s linear forwards 0.6s;
+}
+
+#G_1 {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: write 0.2s linear forwards 0.8s;
+}
+
+#G_2 {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: write 0.2s linear forwards 1s;
+}
+#H_1 {
+  stroke-dasharray: 450;
+  stroke-dashoffset: 450;
+  animation: write 0.2s linear forwards 1.2s;
+}
+#T_1 {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: write 0.2s linear forwards 1.4s;
+}
+#T_2 {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: write 0.2s linear forwards 1.6s;
+}
+#y2 {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: write 0.2s linear forwards 1.8s;
+}
+#y1 {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: write 0.2s linear forwards 2s;
+}
+
+#a1 {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: write 0.2s linear forwards 2.2s;
+}
+#a2 {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: write 0.2s linear forwards 2.4s;
+}
+#g1 {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: write 0.2s linear forwards 2.6s;
+}
+#g2 {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: write 0.2s linear forwards 2.8s;
+}
+#a21 {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: write 0.2s linear forwards 3s;
+}
+#a22 {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: write 0.2s linear forwards 3.2s;
+}
+#m {
+  stroke-dasharray: 580;
+  stroke-dashoffset: 580;
+  animation: write 0.2s linear forwards 3.4s;
+}
+#i-2 {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: write 0.2s linear forwards 3.6s;
+}
+#i_dot {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: write 0.2s linear forwards 3.7s;
 }
