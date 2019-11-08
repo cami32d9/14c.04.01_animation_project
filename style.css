@@ -21,6 +21,13 @@ body {
     transform: translateX(-50%) translateY(-50%);
 }
 
+.paper {
+    background-color: palegoldenrod;
+    padding: 50px;
+    border-radius: 3px;
+}
+
+
 /* ----- SPLASH VIDEO ----- */
 
 .background_video {
@@ -49,14 +56,16 @@ body {
     height: 100vh;
     width: 100vw;
 }
-
-.paper {
-    background-color: palegoldenrod;
-    padding: 50px;
-    border-radius: 3px;
-}
-
 .book {
     max-width: 1000px;
     margin: 0 auto;
+}
+
+.timeline_item {
+    display: flex;
+    margin: 10px 0;
+}
+
+.timeline_icon {
+    margin-right: 10px;
 }

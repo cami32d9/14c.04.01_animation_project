@@ -18,11 +18,14 @@ function start(deathArray) {
 function showTimeline(deathArray) {
 
     deathArray.forEach(fatality => {
-        const template = document.querySelector(".timeline_template").content.cloneNode(true);
+        const timelineTemplate = document.querySelector(".timeline_template").content.cloneNode(true);
+        const infoboxTemplate = document.querySelector(".infobox_template").content.cloneNode(true);
 
-        template.querySelector(".timeline_name").textContent = fatality.name;
+        // template.querySelector(".timeline_icon").textContent = fatality.name;
+        timelineTemplate.querySelector(".timeline_name").textContent = fatality.name;
+        timelineTemplate.querySelector(".timeline_death_date").textContent = fatality.death;
 
-        document.querySelector(".book").appendChild(template);
+        document.querySelector(".book").appendChild(timelineTemplate);
 
     });
 }
