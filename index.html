@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
 
+    <link href="https://fonts.googleapis.com/css?family=Caveat:400,700&display=swap" rel="stylesheet">
+
     <title>A Timeline of Death Note fatalities</title>
 
 </head>
@@ -17,8 +19,6 @@
         <source src="elements/background_video.mp4" type="video/mp4">
     </video>
 </div>
-
-<div class="gradient_container"></div>
 
 <div class="section_container">
     <div class="center headline">
@@ -31,7 +31,29 @@
 </div>
 
 <div class="section_container">
-    <div class="center paper">This is a book</div>
+    <div class="paper book">This is a book</div>
+
+<!-- ----- TEMPLATES ----- -->
+
+<!-- Timeline item template -->
+    <template class="timeline_template">
+
+        <img class="timeline_icon" src="http://placehold.it/30x30" alt="Icon representing the death cause">
+        <div class="timeline_name">Light Yagami</div>
+        <div class="timeline_death_date">01/01/2001</div>
+
+    </template>
+
+    <template class="infobox_template">
+
+        <img class="infobox_image" src="http://placehold.it/300x150" alt="Image of character">
+        <div class="infobox_name">Light Yagami</div>
+        <div class="infobox_birth_date"></div>
+        <div class="infobox_death_date"></div>
+        <div class="infobox_death_cause"></div>
+
+    </template>
+
 </div>
 
 <script src="script.js"></script>

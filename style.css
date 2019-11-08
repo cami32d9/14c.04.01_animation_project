@@ -1,17 +1,14 @@
-body {
-    margin: 0;
+html {
     background-color: black;
-    overflow-x: hidden;
-    font-family: sans-serif;
 }
 
-.gradient_container {
-    position: absolute;
-    top: 100vh;
-    left: 0;
-    width: 100vw;
-    height: 200vh;
-    background: linear-gradient(180deg, rgba(2,0,36,0) 0%, rgba(255,255,255,.5) 50%, rgba(255,255,255,.5) 100%);
+body {
+    margin: 0;
+    padding: 0 0 200px 0;
+    overflow-x: hidden;
+    font-family: 'Caveat', cursive;
+    font-size: 20pt;
+    background: linear-gradient(180deg, rgba(2,0,36,0) 100vh, rgba(255,255,255,.5) 200vh, rgba(255,255,255,.5) 100%);
 }
 
 /* ----- HELPING CLASSES ----- */
@@ -24,6 +21,8 @@ body {
     transform: translateX(-50%) translateY(-50%);
 }
 
+/* ----- SPLASH VIDEO ----- */
+
 .background_video {
     width: 100vw;
     height: 100vh;
@@ -34,12 +33,15 @@ body {
 }
 
 .headline {
-    background-color: rgba(0, 0, 0, 0.5);
+    /*background-color: rgba(0, 0, 0, 0.5);*/
     padding: 50px;
     color: white;
     font-size: 4rem;
     width: fit-content;
     border-radius: 3px;
+    text-align: center;
+    font-family: sans-serif;
+
 }
 
 .section_container {
@@ -52,4 +54,9 @@ body {
     background-color: palegoldenrod;
     padding: 50px;
     border-radius: 3px;
+}
+
+.book {
+    max-width: 1000px;
+    margin: 0 auto;
 }
