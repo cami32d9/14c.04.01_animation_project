@@ -7,7 +7,7 @@ body {
     padding: 0 0 200px 0;
     overflow-x: hidden;
     font-family: 'Caveat', cursive;
-    font-size: 20pt;
+    font-size: 16pt;
     background: linear-gradient(180deg, rgba(2,0,36,0) 100vh, rgba(255,255,255,.5) 200vh, rgba(255,255,255,.5) 100%);
 }
 
@@ -75,8 +75,19 @@ body {
     margin-right: 10px;
 }
 
+/* ----- INFOBOX ----- */
+
 .infobox {
-    width: 500px;
+    width: 400px;
     height: 0;
     display: none;
+}
+
+.infobox_name {
+    text-align: center;
+    font-weight: 700;
+}
+
+.font700 {
+    font-weight: 700;
 }
