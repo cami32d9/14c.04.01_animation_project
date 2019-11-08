@@ -32,7 +32,7 @@ function showTimeline(deathArray) {
 
         timelineTemplate.querySelector(".infobox_image").src = `elements/${fatality.firstname}.svg`;
         timelineTemplate.querySelector(".infobox_name").innerHTML = fatalityName;
-        timelineTemplate.querySelector(".infobox_birth_date").innerHTML += fatality.birth;
+        timelineTemplate.querySelector(".infobox_birth_date").innerHTML += fatality.birth || "Unknown";
         timelineTemplate.querySelector(".infobox_death_date").innerHTML += fatality.death;
         timelineTemplate.querySelector(".infobox_story").innerHTML += fatality.story;
         timelineTemplate.querySelector(".infobox_death_cause").innerHTML += fatality.causeofdeath;

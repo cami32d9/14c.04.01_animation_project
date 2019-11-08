@@ -4,7 +4,7 @@ html {
 
 body {
     margin: 0;
-    padding: 0 0 200px 0;
+    padding: 0 0 600px 0;
     overflow-x: hidden;
     font-family: 'Caveat', cursive;
     font-size: 16pt;
@@ -59,6 +59,7 @@ body {
 .book {
     max-width: 1000px;
     margin: 0 auto;
+    padding-bottom: 400px;
 }
 
 .timeline_item {
@@ -69,6 +70,10 @@ body {
     display: flex;
     margin: 10px 0;
     justify-content: space-between;
+}
+
+.timeline_name {
+    font-weight: 700;
 }
 
 .timeline_icon {
@@ -83,11 +88,26 @@ body {
     display: none;
 }
 
-.infobox_name {
-    text-align: center;
-    font-weight: 700;
+.infobox_image_container {
+    overflow: hidden;
+    animation-name: slide_in_kf;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
 }
 
-.font700 {
+@keyframes slide_in_kf {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.infobox_name {
+    text-align: center;
     font-weight: 700;
 }
