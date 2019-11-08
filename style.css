@@ -65,7 +65,18 @@ body {
     display: flex;
     margin: 10px 0;
 }
+.fatality_item {
+    display: flex;
+    margin: 10px 0;
+    justify-content: space-between;
+}
 
 .timeline_icon {
     margin-right: 10px;
+}
+
+.infobox {
+    width: 500px;
+    height: 0;
+    display: none;
 }
