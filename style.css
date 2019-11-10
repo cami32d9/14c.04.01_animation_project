@@ -124,6 +124,8 @@ body {
   }
 }
 
+/*************** Light Yagami **************/
+
 #L1 {
   stroke-dasharray: 350;
   stroke-dashoffset: 350;
@@ -132,93 +134,514 @@ body {
 #I_1 {
   stroke-dasharray: 350;
   stroke-dashoffset: 350;
-  animation: write 0.2s linear forwards 0.4s;
+  animation: write 0.2s linear forwards;
+  animation-delay: 0.5s;
 }
 #I_2 {
   stroke-dasharray: 350;
   stroke-dashoffset: 350;
-  animation: write 0.2s linear forwards 0.6s;
+  animation: write 0.2s linear forwards 1s;
 }
 
 #G_1 {
   stroke-dasharray: 400;
   stroke-dashoffset: 400;
-  animation: write 0.2s linear forwards 0.8s;
+  animation: write 0.2s linear forwards 1.5s;
 }
 
 #G_2 {
   stroke-dasharray: 400;
   stroke-dashoffset: 400;
-  animation: write 0.2s linear forwards 1s;
+  animation: write 0.2s linear forwards 1.5s;
 }
 #H_1 {
   stroke-dasharray: 450;
   stroke-dashoffset: 450;
-  animation: write 0.2s linear forwards 1.2s;
+  animation: write 0.2s linear forwards 2s;
 }
 #T_1 {
   stroke-dasharray: 400;
   stroke-dashoffset: 400;
-  animation: write 0.2s linear forwards 1.4s;
+  animation: write 0.2s linear forwards 2.5s;
 }
 #T_2 {
   stroke-dasharray: 400;
   stroke-dashoffset: 400;
-  animation: write 0.2s linear forwards 1.6s;
+  animation: write 0.2s linear forwards 2.5s;
 }
 #y2 {
   stroke-dasharray: 400;
   stroke-dashoffset: 400;
-  animation: write 0.2s linear forwards 1.8s;
+  animation: write 0.2s linear forwards 3s;
 }
 #y1 {
   stroke-dasharray: 400;
   stroke-dashoffset: 400;
-  animation: write 0.2s linear forwards 2s;
+  animation: write 0.2s linear forwards 3.2s;
 }
 
 #a1 {
   stroke-dasharray: 400;
   stroke-dashoffset: 400;
-  animation: write 0.2s linear forwards 2.2s;
+  animation: write 0.2s linear forwards 3.5s;
 }
 #a2 {
   stroke-dasharray: 400;
   stroke-dashoffset: 400;
-  animation: write 0.2s linear forwards 2.4s;
+  animation: write 0.2s linear forwards 3.7s;
 }
 #g1 {
   stroke-dasharray: 400;
   stroke-dashoffset: 400;
-  animation: write 0.2s linear forwards 2.6s;
+  animation: write 0.2s linear forwards 4s;
 }
 #g2 {
   stroke-dasharray: 400;
   stroke-dashoffset: 400;
-  animation: write 0.2s linear forwards 2.8s;
+  animation: write 0.2s linear forwards 4.2s;
 }
 #a21 {
   stroke-dasharray: 400;
   stroke-dashoffset: 400;
-  animation: write 0.2s linear forwards 3s;
+  animation: write 0.2s linear forwards 4.5s;
 }
 #a22 {
   stroke-dasharray: 400;
   stroke-dashoffset: 400;
-  animation: write 0.2s linear forwards 3.2s;
+  animation: write 0.2s linear forwards 4.7s;
 }
 #m {
   stroke-dasharray: 580;
   stroke-dashoffset: 580;
-  animation: write 0.2s linear forwards 3.4s;
+  animation: write 0.2s linear forwards 5s;
 }
 #i-2 {
   stroke-dasharray: 400;
   stroke-dashoffset: 400;
-  animation: write 0.2s linear forwards 3.6s;
+  animation: write 0.2s linear forwards 5.5s;
 }
 #i_dot {
   stroke-dasharray: 400;
   stroke-dashoffset: 400;
-  animation: write 0.2s linear forwards 3.7s;
+  animation: write 0.2s linear forwards 5.7s;
+}
+
+/************** Misa Amane ****************/
+
+#Misa_M-2 {
+  stroke-dasharray: 920;
+  stroke-dashoffset: 920;
+  animation: write 0.2s linear forwards;
+}
+#Misa_i_2 {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: write 0.2s linear forwards 0.2;
+}
+#Misa_i_1 {
+  stroke-dasharray: 350;
+  stroke-dashoffset: 350;
+  animation: write 0.2s linear forwards 0.4s;
+}
+
+#Misa_s {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: write 0.2s linear forwards 0.6s;
+}
+
+#Misa_a_1 {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: write 0.2s linear forwards 0.8s;
+}
+#Misa_a_2 {
+  stroke-dasharray: 450;
+  stroke-dashoffset: 450;
+  animation: write 0.2s linear forwards 1s;
+}
+#Misa_a_3 {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  animation: write 0.2s linear forwards 1.2s;
+}
+#Misa_a_4-2 {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  animation: write 0.2s linear forwards 1.4s;
+}
+#Misa_m {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: write 0.2s linear forwards 1.6s;
+}
+#Misa_a_5 {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: write 0.2s linear forwards 1.8s;
+}
+
+#Misa_a_4 {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: write 0.2s linear forwards 2s;
+}
+#Misa_n {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: write 0.2s linear forwards 2.2s;
+}
+#Misa_e1 {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: write 0.2s linear forwards 2.4s;
+}
+#Misa_e2 {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: write 0.2s linear forwards 2.4s;
+}
+
+/************** L ***********/
+
+#L {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: write 0.2s linear forwards;
+}
+
+#Raye_r {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards;
+}
+
+#Raye_a {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 0.2s;
+}
+#Raye_y {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 0.4s;
+}
+#Raye_e1 {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 0.6s;
+}
+
+#Raye_p {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 0.8s;
+}
+#Raye_e2 {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 1s;
+}
+#Raye_n {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 1.2s;
+}
+#Raye_b {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 1.4s;
+}
+#Raye_e3 {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 1.6s;
+}
+#Raye_r-2 {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 1.8s;
+}
+
+/********* Naomi **********/
+
+#Naomi_n {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: write 0.2s linear forwards;
+}
+#Naomi_a1 {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: write 0.2s linear forwards 0.2s;
+}
+#Naomi_o {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: write 0.2s linear forwards 0.4s;
+}
+#Naomi_m1 {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: write 0.2s linear forwards 0.6s;
+}
+#Naomi_i1 {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: write 0.2s linear forwards 0.8s;
+}
+#Naomi_i2 {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: write 0.2s linear forwards 0.8s;
+}
+#Naomi_m2 {
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  animation: write 0.2s linear forwards 1s;
+}
+#Naomi_i4 {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: write 0.2s linear forwards 1.2s;
+}
+#Naomi_i5 {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: write 0.2s linear forwards 1.2s;
+}
+#Naomi_s {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: write 0.2s linear forwards 1.4s;
+}
+#Naomi_o2 {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: write 0.2s linear forwards 1.6s;
+}
+#Naomi_r {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: write 0.2s linear forwards 1.8s;
+}
+#Naomi_a2 {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: write 0.2s linear forwards 2s;
+}
+
+/************* Rem ************/
+
+#Rem_r {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  animation: write 0.2s linear forwards;
+}
+#Rem_e {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: write 0.2s linear forwards 0.2s;
+}
+#Rem_m {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: write 0.2s linear forwards 0.4s;
+}
+
+/************ Watari *************/
+
+#Watari_w {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: write 0.2s linear forwards;
+}
+#Watari_a1 {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  animation: write 0.2s linear forwards 0.2s;
+}
+#Watari_t1 {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  animation: write 0.2s linear forwards 0.4s;
+}
+#Watari_t2 {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  animation: write 0.2s linear forwards 0.4s;
+}
+#Watari_a2 {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  animation: write 0.2s linear forwards 0.6s;
+}
+#Watari_r {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  animation: write 0.2s linear forwards 0.8s;
+}
+#Watari_i1 {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  animation: write 0.2s linear forwards 1s;
+}
+#Watari_i2 {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  animation: write 0.2s linear forwards 1s;
+}
+
+/*********** Lind ***********/
+
+#Lind_l {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: write 0.2s linear forwards;
+}
+#Lind_i1 {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: write 0.2s linear forwards 0.2s;
+}
+#Lind_i2 {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: write 0.2s linear forwards 0.2s;
+}
+#Lind_n {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  animation: write 0.2s linear forwards 0.4s;
+}
+#Lind_d {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: write 0.2s linear forwards 0.6s;
+}
+#Lind_l2 {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: write 0.2s linear forwards 0.8s;
+}
+#Lind_t1 {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: write 0.2s linear forwards 1s;
+}
+#Lind_t2 {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: write 0.2s linear forwards 1s;
+}
+#Lind_a {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: write 0.2s linear forwards 1.2s;
+}
+#Lind_i3 {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: write 0.2s linear forwards 1.4s;
+}
+#Lind_i4 {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: write 0.2s linear forwards 1.4s;
+}
+#Lind_l3 {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: write 0.2s linear forwards 1.6s;
+}
+#Lind_o {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: write 0.2s linear forwards 1.8s;
+}
+#Lind_r {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: write 0.2s linear forwards 2s;
+}
+
+/*********************** Kurou ***************/
+
+#Kurou_k {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  animation: write 0.2s linear forwards;
+}
+#Kurou_o {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: write 0.2s linear forwards 0.2s;
+}
+#Kurou_r {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: write 0.2s linear forwards 0.4s;
+}
+#Kurou_o1 {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: write 0.2s linear forwards 0.6s;
+}
+#Kurou_u {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: write 0.2s linear forwards 0.8s;
+}
+
+#Kurou_o2 {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: write 0.2s linear forwards 1s;
+}
+#Kurou_t1 {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: write 0.2s linear forwards 1.2s;
+}
+#Kurou_t2 {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: write 0.2s linear forwards 1.2s;
+}
+#Kurou_o3 {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: write 0.2s linear forwards 1.4s;
+}
+#Kurou_h {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: write 0.2s linear forwards 1.6s;
+}
+#Kurou_a1 {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: write 0.2s linear forwards 1.8s;
+}
+
+#Kurou_r2 {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: write 0.2s linear forwards 2s;
+}
+#Kurou_a2 {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: write 0.2s linear forwards 2.2s;
+}
+
+#Kurou_d {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: write 0.2s linear forwards 2.4s;
+}
+#Kurou_a3 {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: write 0.2s linear forwards 2.6s;
 }
