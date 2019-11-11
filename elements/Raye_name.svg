@@ -34,52 +34,52 @@
   <title>Raye_name</title>
   <g id="Raye_name">
     <g id="Raye_r_mask">
-      <g clip-path="url(#clip-path)">
+      <g clip-path="url(#Raye-clip-path-1)">
         <path id="Raye_r" d="M11.5,281.5l84-208-30,8c47.92-16.73,85-13.2,101,23-15.75,37.05-50,61.65-110,69,13.37,44.2,46.52,79,98,105" fill="none" stroke="#000" stroke-width="28"/>
       </g>
     </g>
     <g id="Raye_a_mask">
-      <g clip-path="url(#Raye-clip-path)">
+      <g clip-path="url(#Raye-clip-path-2)">
         <path id="Raye_a" d="M255.5,169.5c-4.78-12.63-14.46-17-25-20-20.85,13.45-41.09,41.66-61,78,4.92,7.67,10.15,14.07,17,14,26.8-8.57,50-41.41,73-75-16.29,34.78-9.64,61,32,74" fill="none" stroke="#000" stroke-width="28"/>
       </g>
     </g>
     <g id="Raye_y_mask">
-      <g clip-path="url(#clip-path-3)">
+      <g clip-path="url(#Raye-clip-path-3)">
         <path id="Raye_y" d="M312,128c-2,51-.85,97.76,21.5,116.5l50-103c-26.91,66-57.34,124.35-96,165-12.64,3.05-30.2-3.73-48-11" fill="none" stroke="#000" stroke-width="29"/>
       </g>
     </g>
     <g id="Raye_e1_mask">
-      <g clip-path="url(#clip-path-4)">
+      <g clip-path="url(#Raye-clip-path-4)">
         <path id="Raye_e1" d="M410.5,185.5c8.78,9.61,21,13.74,35,15,9.77-8.7,17.74-23.63,25-41-9.23-10.46-19.33-14-30-13-24.67,24.73-52.42,63.17-34,101,15.73-1.51,20.41,11.11,64-26" fill="none" stroke="#000" stroke-width="30"/>
       </g>
     </g>
     <g id="Raye_p_mask">
-      <g clip-path="url(#clip-path-5)">
+      <g clip-path="url(#Raye-clip-path-5)">
         <path id="Raye_p" d="M593,252l-18.5-14.5,41-157c19.4-7.89,39.71-9,61-3,7.21,8.88,13.31,19.51,15,37-20.22,35.16-45.8,62.39-88,65" fill="none" stroke="#000" stroke-width="48"/>
       </g>
     </g>
     <g id="Raye_e2_mask">
-      <g clip-path="url(#clip-path-6)">
+      <g clip-path="url(#Raye-clip-path-6)">
         <path id="Raye_e2" d="M679.5,172.5c18.58,12.35,36.53,23.25,50,24,21.48-.48,30.45-14,38-29-3.89-11.14-11.48-16.15-21-18-39.59,13.71-41.69,50.8-42,89,9.08,6.15,18.85,7.84,29,7,12.67-5.22,22-19.1,31-34" fill="none" stroke="#000" stroke-width="27"/>
       </g>
     </g>
     <g id="Raye_n_mask">
-      <g clip-path="url(#clip-path-7)">
+      <g clip-path="url(#Raye-clip-path-7)">
         <path id="Raye_n" d="M822.5,138.5c3.23,34.11-5.33,67-23,99,17.66-31.6,72-78,78-68s-4.89,60.9,0,90" fill="none" stroke="#000" stroke-width="31"/>
       </g>
     </g>
     <g id="Raye_b_mask">
-      <g clip-path="url(#clip-path-8)">
+      <g clip-path="url(#Raye-clip-path-8)">
         <path id="Raye_b" d="M994.5,50.5a1359.47,1359.47,0,0,0-65,179c27.35-40.49,55.31-70.24,85-69,4.33,12.26,5,26-8,45-16.34,17-33.21,32.94-56,38-9.89-2.45-16.78-8.67-22-17" fill="none" stroke="#000" stroke-width="29"/>
       </g>
     </g>
     <g id="Raye_e3_mask">
-      <g clip-path="url(#clip-path-9)">
+      <g clip-path="url(#Raye-clip-path-9)">
         <path id="Raye_e3" d="M1050.5,177.5a130.9,130.9,0,0,0,42,17c14-6.3,23.11-17.53,31-30-5.92-12.17-16.61-16.6-31-15-24.21,14.92-33.77,43.9-38,78,7.29,9.42,15.33,17,26,18,12.27-4.75,25.09-15.38,38-27" fill="none" stroke="#000" stroke-width="29"/>
       </g>
     </g>
     <g id="Raye_r_mask-2" data-name="Raye_r_mask">
-      <g clip-path="url(#clip-path-10)">
+      <g clip-path="url(#Raye-clip-path-10)">
         <path id="Raye_r-2" data-name="Raye_r" d="M1183.5,131.5a737.34,737.34,0,0,0-40,120c17.68-48,51.28-81.61,105-97" fill="none" stroke="#000" stroke-width="29"/>
       </g>
     </g>
