@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", getJson);
 let itemID = 0;
 let nameSVG;
 let svgIndex = 0;
+let fatalityIndex;
 
 async function getJson() {
     let pagesUrl =
@@ -37,13 +38,17 @@ function fetchSVGs(deathArray) {
 
 function start(deathArray) {
     console.log(deathArray);
-    showTimeline(deathArray);
+    showTimeline(deathArray, 0);
 }
 
 let fatality;
 
-function showTimeline(deathArray,) {
-    deathArray.forEach(fatality => {
+function showTimeline(deathArray, getFatalityIndex) {
+
+    fatalityIndex = getFatalityIndex;
+
+    const fatality = deathArray[fatalityIndex];
+
         const timelineTemplate = document
             .querySelector(".timeline_template")
             .content.cloneNode(true);
@@ -96,5 +101,10 @@ function showTimeline(deathArray,) {
             document.querySelector(`[itemID="${idAttribute}"]`).style.display =
                 "none";
         });
-    });
+
+        fatalityIndex++;
+
+        setTimeout(function() {
+            showTimeline(deathArray, fatalityIndex)
+        }, 2000)
 }
