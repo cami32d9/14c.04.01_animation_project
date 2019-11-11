@@ -3,6 +3,8 @@
 document.addEventListener("DOMContentLoaded", getJson);
 
 let itemID = 0;
+let nameSVG;
+let svgIndex = 0;
 
 async function getJson() {
     let pagesUrl =
@@ -12,29 +14,34 @@ async function getJson() {
     fetchSVGs(deathArray);
 }
 
-let lightName;
-
 function fetchSVGs(deathArray) {
 
-    const lightNameSVG = fetch("elements/Light_name.svg").then(r => r.text());
+    deathArray.forEach(fatality => {
 
-    Promise
-        .all([lightNameSVG])
-        .then(
-            function (responses) {
-                const [lightNameSVG] = responses;
-                lightName = lightNameSVG;
-                start(deathArray);
-            }
-        );
+        nameSVG = fetch(`elements/${fatality.firstname}_name.svg`).then(r => r.text());
+
+        Promise
+            .all([nameSVG])
+            .then(
+                function (responses) {
+                    const [nameSVG] = responses;
+                    fatality.namesvg = nameSVG;
+                    svgIndex++;
+                    if (svgIndex === deathArray.length) {
+                        start(deathArray);
+                    }
+                }
+            );
+    });
 }
 
 function start(deathArray) {
     console.log(deathArray);
-    showTimeline(deathArray);
+    showTimeline(deathArray, 0);
 }
 
-function showTimeline(deathArray) {
+function showTimeline(deathArray, fatalityIndex) {
+    console.log(deathArray[fatalityIndex]);
     deathArray.forEach(fatality => {
         const timelineTemplate = document
             .querySelector(".timeline_template")
@@ -49,7 +56,7 @@ function showTimeline(deathArray) {
         timelineTemplate
             .querySelector(".infobox")
             .setAttribute("itemID", `${itemID}`);
-        timelineTemplate.querySelector(".timeline_name").textContent = fatalityName;
+        timelineTemplate.querySelector(".timeline_name").innerHTML = fatalityName;
         timelineTemplate.querySelector(".timeline_death_date").textContent =
             fatality.death;
 
@@ -58,7 +65,7 @@ function showTimeline(deathArray) {
         ).src = `elements/${fatality.firstname}.svg`;
         timelineTemplate.querySelector(
             ".infobox_name"
-        ).innerHTML = lightName;
+        ).innerHTML = fatality.namesvg;
         timelineTemplate.querySelector(".infobox_birth_date").innerHTML +=
             fatality.birth || "Unknown";
         timelineTemplate.querySelector(".infobox_death_date").innerHTML +=

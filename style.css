@@ -76,7 +76,12 @@ body {
 }
 
 .timeline_name {
-  font-weight: 700;
+  height: 50px;
+}
+
+.timeline_name svg {
+  height: 100%;
+  width: auto;
 }
 
 .timeline_icon {
