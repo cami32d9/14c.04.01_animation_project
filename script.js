@@ -37,16 +37,17 @@ function fetchSVGs(deathArray) {
 
 function start(deathArray) {
     console.log(deathArray);
-    showTimeline(deathArray, 0);
+    showTimeline(deathArray);
 }
 
-function showTimeline(deathArray, fatalityIndex) {
-    console.log(deathArray[fatalityIndex]);
+let fatality;
+
+function showTimeline(deathArray,) {
     deathArray.forEach(fatality => {
         const timelineTemplate = document
             .querySelector(".timeline_template")
             .content.cloneNode(true);
-        const fatalityName = `${fatality.firstname} ${fatality.lastname}`;
+        fatality.name = `${fatality.firstname} ${fatality.lastname}`;
         itemID++;
 
         // template.querySelector(".timeline_icon").textContent = fatality.name;
@@ -56,7 +57,7 @@ function showTimeline(deathArray, fatalityIndex) {
         timelineTemplate
             .querySelector(".infobox")
             .setAttribute("itemID", `${itemID}`);
-        timelineTemplate.querySelector(".timeline_name").innerHTML = fatalityName;
+        timelineTemplate.querySelector(".timeline_name").innerHTML = fatality.namesvg;
         timelineTemplate.querySelector(".timeline_death_date").textContent =
             fatality.death;
 

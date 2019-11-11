@@ -105,6 +105,27 @@ body {
   animation-timing-function: ease-in-out;
 }
 
+.infobox_name {
+  height: 100px;
+  text-align: center;
+}
+
+.infobox_name svg {
+  height: 100%;
+  width: auto;
+}
+
+.infobox_details {
+  opacity: 0;
+  margin: 10px 0;
+  animation-name: fade_in_kf;
+  animation-delay: 3s;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
 @keyframes slide_in_kf {
   0% {
     width: 0;
@@ -115,11 +136,16 @@ body {
   }
 }
 
-.infobox_name {
-  margin-top: -50px;
-  margin-bottom: -30px;
-  text-align: center;
+@keyframes fade_in_kf {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
+
 
 /******** Handwriting Animation **********/
 
