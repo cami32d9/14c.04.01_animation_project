@@ -4,7 +4,7 @@ html {
 
 body {
   margin: 0;
-  padding: 0 0 600px 0;
+  padding: 0 0 900px 0;
   overflow-x: hidden;
   font-family: "Caveat", cursive;
   font-size: 16pt;
@@ -76,7 +76,12 @@ body {
 }
 
 .timeline_name {
-  font-weight: 700;
+  height: 50px;
+}
+
+.timeline_name svg {
+  height: 100%;
+  width: auto;
 }
 
 .timeline_icon {
