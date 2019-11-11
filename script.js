@@ -62,6 +62,8 @@ function showTimeline(deathArray, getFatalityIndex) {
         timelineTemplate
             .querySelector(".infobox")
             .setAttribute("itemID", `${itemID}`);
+
+        timelineTemplate.querySelector(".timeline_icon").src = `elements/${fatality.deathcategory}.svg`;
         timelineTemplate.querySelector(".timeline_name").innerHTML = fatality.namesvg;
         timelineTemplate.querySelector(".timeline_death_date").textContent =
             fatality.death;
@@ -106,5 +108,5 @@ function showTimeline(deathArray, getFatalityIndex) {
 
         setTimeout(function() {
             showTimeline(deathArray, fatalityIndex)
-        }, 2000)
+        }, 200)
 }
