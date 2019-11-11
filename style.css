@@ -76,8 +76,23 @@ body {
   justify-content: space-between;
 }
 
+.timeline_icon_container {
+  position: relative;
+  width: 50px;
+  height: 75px;
+  display: flex;
+  vertical-align: center;
+  margin-right: 10px;
+}
+
+.timeline_icon {
+  height: 50px;
+  width: 100%;
+}
+
 .timeline_name {
   height: 50px;
+  flex: 1;
 }
 
 .timeline_name svg {
