@@ -82,6 +82,8 @@ function showTimeline(deathArray, getFatalityIndex) {
         .querySelector(".timeline_template")
         .content.cloneNode(true);
 
+    itemID++;
+
 
     // Adding details to the item on the timeline.
     timelineTemplate
@@ -124,20 +126,30 @@ function showTimeline(deathArray, getFatalityIndex) {
             .querySelector(".book")
             .lastElementChild.addEventListener(
             "mouseover",
-            function displayInfobox() {
-                idAttribute = this.getAttribute("timelineItemID");
-                document.querySelector(`[itemID="${idAttribute}"]`).style.display =
-                    "block";
-            }
-        );
+            displayInfobox);
 
         document
             .querySelector(".book")
-            .lastElementChild.addEventListener("mouseout", function hideInfobox() {
-            document.querySelector(`[itemID="${idAttribute}"]`).style.display =
-                "none";
-        });
+            .lastElementChild.addEventListener("mouseout", hideInfobox);
+    }
 
+    else {
+        document
+            .querySelector(".book")
+            .lastElementChild.addEventListener(
+            "click",
+            displayInfobox);
+    }
+
+    function displayInfobox() {
+        idAttribute = this.getAttribute("timelineItemID");
+        document.querySelector(`[itemID="${idAttribute}"]`).style.display =
+            "block";
+    }
+
+    function hideInfobox() {
+        document.querySelector(`[itemID="${idAttribute}"]`).style.display =
+            "none";
     }
 
     // Adds +1 to the fatalityIndex, so the next person in the array will be used next.
