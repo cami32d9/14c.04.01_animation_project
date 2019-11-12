@@ -71,6 +71,7 @@ body {
   margin: 10px 0;
 }
 .fatality_item {
+  position: relative;
   display: flex;
   margin: 10px 0;
   justify-content: space-between;
@@ -109,6 +110,15 @@ body {
 }
 
 /* ----- INFOBOX ----- */
+
+.touch_closing_div {
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
 
 .infobox {
   width: 400px;

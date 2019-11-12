@@ -128,9 +128,11 @@ function showTimeline(deathArray, getFatalityIndex) {
             "mouseover",
             displayInfobox);
 
-        document
-            .querySelector(".book")
-            .lastElementChild.addEventListener("mouseout", hideInfobox);
+        // QUESTION!: Should the infoboxes disappear on "mouseout" from the fatality_item, or only on "mouseover" on
+        // another item or click outside the items?
+        // document
+        //     .querySelector(".book")
+        //     .lastElementChild.addEventListener("mouseout", hideInfobox);
     }
 
     else {
@@ -142,15 +144,16 @@ function showTimeline(deathArray, getFatalityIndex) {
     }
 
     function displayInfobox() {
+        hideAllInfoboxes();
         idAttribute = this.getAttribute("timelineItemID");
         document.querySelector(`[itemID="${idAttribute}"]`).style.display =
             "block";
     }
 
-    function hideInfobox() {
-        document.querySelector(`[itemID="${idAttribute}"]`).style.display =
-            "none";
-    }
+    // function hideInfobox() {
+    //     document.querySelector(`[itemID="${idAttribute}"]`).style.display =
+    //         "none";
+    // }
 
     // Adds +1 to the fatalityIndex, so the next person in the array will be used next.
     fatalityIndex++;
@@ -158,7 +161,19 @@ function showTimeline(deathArray, getFatalityIndex) {
     // Sets timeout for the next person to appear on the page after x seconds.
     // We might be able to do this with an "animationend" listener instead, to be sure the first name is written
     // before the next starts appearing?
+    if (deathArray.length > fatalityIndex) {
     setTimeout(function () {
         showTimeline(deathArray, fatalityIndex)
     }, 200)
+    }
+}
+
+
+document.querySelector(".touch_closing_div").addEventListener("click", hideAllInfoboxes);
+
+
+function hideAllInfoboxes() {
+    document.querySelectorAll(".infobox").forEach(infobox => {
+        infobox.style.display = "none";
+    })
 }
