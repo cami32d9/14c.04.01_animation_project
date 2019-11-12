@@ -95,6 +95,10 @@ body {
   flex: 1;
 }
 
+.not_touch_device_item .timeline_name:hover {
+  transform: scale(1.1) translateX(7px);
+}
+
 .timeline_name svg {
   height: 100%;
   width: auto;
