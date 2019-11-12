@@ -119,7 +119,7 @@ function showTimeline(deathArray, getFatalityIndex) {
     let idAttribute;
 
     // Adds hover function to devices that have a mouse pointer/is not touch.
-    if (!isTouchDeviceFunction()) {
+    // if (!isTouchDeviceFunction()) {
         document
             .querySelector(".book")
             .lastElementChild.addEventListener(
@@ -138,7 +138,18 @@ function showTimeline(deathArray, getFatalityIndex) {
                 "none";
         });
 
-    }
+    // }
+    // else {
+    //     document
+    //     .querySelector(".book")
+    //     .lastElementChild.addEventListener("click", displayInfobox);
+    // }
+    //
+    // function displayInfobox() {
+    //     idAttribute = this.getAttribute("timelineItemID");
+    //     document.querySelector(`[itemID="${idAttribute}"]`).style.display =
+    //         "block";
+    // }
 
     // Adds +1 to the fatalityIndex, so the next person in the array will be used next.
     fatalityIndex++;
