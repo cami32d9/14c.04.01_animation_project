@@ -73,7 +73,6 @@ function fetchSVGs(deathArray) {
 // function loops over each person in the array. This method is chosen over forEach to be able to delay each line's
 // appearance on the timeline with a setTimeout.
 function showTimeline(deathArray, getFatalityIndex) {
-
     fatalityIndex = getFatalityIndex;
 
     const fatality = deathArray[fatalityIndex];
@@ -87,7 +86,7 @@ function showTimeline(deathArray, getFatalityIndex) {
 
     // Adding details to the item on the timeline.
     timelineTemplate
-        .querySelector(".fatality_item")
+        .querySelector(".fatality_item_container")
         .setAttribute("timelineItemID", `${itemID}`);
     timelineTemplate
         .querySelector(".infobox")
@@ -146,6 +145,7 @@ function showTimeline(deathArray, getFatalityIndex) {
     function displayInfobox() {
         hideAllInfoboxes();
         idAttribute = this.getAttribute("timelineItemID");
+        console.log(idAttribute);
         document.querySelector(`[itemID="${idAttribute}"]`).style.display =
             "block";
     }
