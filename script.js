@@ -74,11 +74,12 @@ function fetchSVGs(deathArray) {
 // appearance on the timeline with a setTimeout.
 function showTimeline(deathArray, getFatalityIndex) {
 
-    calculateTimelineGap();
 
     fatalityIndex = getFatalityIndex;
 
     const fatality = deathArray[fatalityIndex];
+
+    let daysBetweenDeaths = calculateTimelineGap(deathArray, fatalityIndex);
 
     const timelineTemplate = document
         .querySelector(".timeline_template")
@@ -99,6 +100,13 @@ function showTimeline(deathArray, getFatalityIndex) {
     timelineTemplate.querySelector(".timeline_name").innerHTML = fatality.namesvg;
     timelineTemplate.querySelector(".timeline_death_date").textContent =
         fatality.death;
+
+    console.log(fatality.firstname + " " + daysBetweenDeaths);
+
+    if (daysBetweenDeaths > 0) {
+        timelineTemplate.querySelector(".timeline_line").style.border = `2px solid black`;
+        timelineTemplate.querySelector(".timeline_line").style.height = `${daysBetweenDeaths}px`;
+    }
 
     // Adding details to the infobox.
     timelineTemplate.querySelector(
@@ -179,6 +187,29 @@ function hideAllInfoboxes() {
     })
 }
 
-function calculateTimelineGap(previousDeath, thisDeath) {
+function calculateTimelineGap(deathArray, thisFatalityIndex) {
 
-}
+    let daysBetweenDeaths;
+    let thisFatality = deathArray[thisFatalityIndex];
+    let nextFatality = deathArray[thisFatalityIndex + 1];
+
+    let thisFatalityDeath = new Date(thisFatality.death);
+
+    if (nextFatality) {
+        let nextFatalityDeath = new Date(nextFatality.death);
+        daysBetweenDeaths = Math.round((nextFatalityDeath - thisFatalityDeath) / (1000 * 3600 * 24));
+    }
+
+
+    if ((daysBetweenDeaths > 150) && (daysBetweenDeaths < 1000)) {
+        console.log("Yes, I'm over");
+        daysBetweenDeaths = Math.round(daysBetweenDeaths/1.5);
+    }
+
+    if (daysBetweenDeaths > 1000) {
+        console.log("Yes, I'm over");
+        daysBetweenDeaths = Math.round(daysBetweenDeaths/4);
+    }
+
+    return daysBetweenDeaths || 0;
+    }
