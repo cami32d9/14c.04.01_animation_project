@@ -52,17 +52,8 @@ body {
   border-radius: 3px;
   text-align: center;
   font-weight: 700;
-  animation: fadeinheadline 10s linear forwards;
 }
 
-@keyframes fadeinheadline {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .section_container {
   position: relative;
   height: 100vh;
@@ -129,7 +120,6 @@ body {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
-
 }
 
 /* ----- INFOBOX ----- */
@@ -199,7 +189,6 @@ body {
     opacity: 1;
   }
 }
-
 
 @keyframes line_length_kf {
   0% {
