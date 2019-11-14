@@ -9,10 +9,10 @@ body {
   font-family: "Caveat", cursive;
   font-size: 16pt;
   background: linear-gradient(
-    180deg,
-    rgba(2, 0, 36, 0) 100vh,
-    rgba(255, 255, 255, 0.5) 200vh,
-    rgba(255, 255, 255, 0.5) 100%
+          180deg,
+          rgba(2, 0, 36, 0) 100vh,
+          rgba(255, 255, 255, 0.5) 200vh,
+          rgba(255, 255, 255, 0.5) 100%
   );
 }
 
@@ -28,9 +28,15 @@ body {
 
 .paper {
   background-color: palegoldenrod;
-  padding: 50px;
   border-radius: 3px;
 }
+
+.section_container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
 
 /* ----- SPLASH VIDEO ----- */
 
@@ -54,13 +60,24 @@ body {
   font-weight: 700;
 }
 
+<<<<<<< HEAD
 .section_container {
   position: relative;
   height: 100vh;
   width: 100vw;
+=======
+
+/* ----- RULES ----- */
+
+.rules {
+  padding: 20px;
+>>>>>>> eb3259067e50bfe8d7ccd22e3189365499f607fc
 }
 
+/* ----- BOOK ----- */
+
 .book {
+  padding-top: 30px;
   max-width: 1000px;
   margin: 0 auto;
   padding-bottom: 400px;
@@ -70,6 +87,12 @@ body {
   display: flex;
   margin: 10px 0;
 }
+
+.fatality_item_container {
+  max-width: 100%;
+  margin: 0 10%;
+}
+
 .fatality_item {
   position: relative;
   display: flex;
@@ -97,10 +120,12 @@ body {
 
 .timeline_name {
   height: 40px;
+  max-width: 100%;
   flex: 1;
 }
 
 .timeline_name svg {
+  max-width: 100%;
   height: 100%;
   width: auto;
 }
@@ -170,6 +195,8 @@ body {
   animation-timing-function: ease-in-out;
 }
 
+/* ----- KEYFRAMES ----- */
+
 @keyframes slide_in_kf {
   0% {
     width: 0;
@@ -197,5 +224,75 @@ body {
 
   100% {
     height: 100%;
+  }
+}
+
+@keyframes fadeinheadline {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ----- MEDIA QUERIES ----- */
+
+@media screen and (max-width: 899px) {
+
+  /* ----- INFOBOX ----- */
+
+  .infobox {
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    z-index: 101;
+    position: fixed;
+    top: 5vh;
+    left: 10vw;
+    width: 80vw;
+    background-color: palegoldenrod;
+    border: 5px solid black;
+    border-radius: 3px;
+    height: auto;
+    display: none;
+  }
+
+  .infobox_image_container {
+    margin: 0 auto;
+    overflow: hidden;
+    animation-name: slide_in_kf;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  }
+
+  .infobox_name {
+    height: 100px;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .infobox_name svg {
+    height: 100%;
+    max-width: 100%;
+    width: auto;
+  }
+
+  .infobox_details {
+    opacity: 0;
+    margin: 10px;
+    animation-name: fade_in_kf;
+    animation-delay: 3s;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  }
+
+  .touch_closing_div {
+    display: none;
+    background-color: rgba(169, 116, 108, 0.3);
   }
 }
