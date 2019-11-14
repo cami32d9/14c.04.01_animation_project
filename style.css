@@ -119,9 +119,17 @@ body {
 }
 
 .timeline_line {
+  background-color: black;
   margin-left: 20px;
-  width: 0;
-  border-radius: 4px;
+  border-radius: 400px;
+
+  animation-name: line_length_kf;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+
 }
 
 /* ----- INFOBOX ----- */
@@ -189,5 +197,16 @@ body {
 
   100% {
     opacity: 1;
+  }
+}
+
+
+@keyframes line_length_kf {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 100%;
   }
 }

@@ -104,8 +104,11 @@ function showTimeline(deathArray, getFatalityIndex) {
     console.log(fatality.firstname + " " + daysBetweenDeaths);
 
     if (daysBetweenDeaths > 0) {
-        timelineTemplate.querySelector(".timeline_line").style.border = `2px solid black`;
-        timelineTemplate.querySelector(".timeline_line").style.height = `${daysBetweenDeaths}px`;
+        timelineTemplate.querySelector(".timeline_line").style.width = "4px";
+
+        let lineLength = Math.round(daysBetweenDeaths + 10);
+
+        timelineTemplate.querySelector(".timeline_line_container").style.height = `${lineLength}px`;
     }
 
     // Adding details to the infobox.
@@ -123,6 +126,12 @@ function showTimeline(deathArray, getFatalityIndex) {
         fatality.story;
     timelineTemplate.querySelector(".infobox_death_cause").innerHTML +=
         fatality.causeofdeath;
+
+    timelineTemplate.querySelector(
+        ".infobox_name"
+    ).addEventListener("animationend", function() {
+        console.log("I've ended");
+    });
 
     // Adding the whole item to the HTML using the template.
     document.querySelector(".book").appendChild(timelineTemplate);
@@ -173,7 +182,7 @@ function showTimeline(deathArray, getFatalityIndex) {
     if (deathArray.length > fatalityIndex) {
     setTimeout(function () {
         showTimeline(deathArray, fatalityIndex)
-    }, 200)
+    }, 2000)
     }
 }
 
