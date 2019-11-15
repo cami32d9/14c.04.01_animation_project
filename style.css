@@ -52,25 +52,29 @@ body {
   /*background-color: rgba(0, 0, 0, 0.5);*/
   padding: 50px;
   color: white;
-  font-size: 5.5rem;
+  max-width: 90%;
+  /*font-size: 5.5rem;*/
   width: fit-content;
   border-radius: 3px;
   text-align: center;
   font-weight: 700;
 }
 
-<<<<<<< HEAD
+.headline img {
+  width: 100%;
+}
+
 .section_container {
   position: relative;
   height: 100vh;
   width: 100vw;
-=======
+
+}
 
 /* ----- RULES ----- */
 
 .rules {
   padding: 20px;
->>>>>>> eb3259067e50bfe8d7ccd22e3189365499f607fc
 }
 
 /* ----- BOOK ----- */
@@ -292,6 +296,10 @@ body {
 
   .mobile_hide_overflow {
     overflow: hidden;
+  }
+
+  .headline {
+    padding: 0;
   }
 
 }
