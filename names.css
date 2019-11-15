@@ -1354,3 +1354,203 @@
   stroke-dashoffset: 800;
   animation: write 0.2s linear forwards 2.2s;
 }
+
+/************* Headline *************/
+
+#Headline_a {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards;
+}
+
+#Headline_t {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 0.2s;
+}
+
+#Headline_i1 {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 0.4s;
+}
+#Headline_i2 {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 0.4s;
+}
+
+#Headline_m {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 0.6s;
+}
+
+#Headline_e {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 0.8s;
+}
+
+#Headline_l {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 1s;
+}
+
+#Headline_i3 {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 1.2s;
+}
+
+#Headline_i4 {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 1.2s;
+}
+#Headline_n {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 1.4s;
+}
+
+#Headline_e1 {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 1.6s;
+}
+
+#Headline_o {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 1.8s;
+}
+
+#Headline_f {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 2s;
+}
+
+#Headline_d {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  animation: write 0.2s linear forwards 2.2s;
+}
+
+#Headline_e2 {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 2.4s;
+}
+
+#Headline_a-2 {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 2.6s;
+}
+#Headline_t2 {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 2.8s;
+}
+
+#Headline_h {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 3s;
+}
+
+#Headline_n1 {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 3.2s;
+}
+
+#Headline_o1 {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 3.4s;
+}
+
+#Headline_t3 {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 3.6s;
+}
+
+#Headline_e3 {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 3.8s;
+}
+
+#Headline_f-2 {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 4s;
+}
+
+#Headline_a1 {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 4.2s;
+}
+
+#Headline_t4 {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 4.4s;
+}
+
+#Headline_a2 {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 4.6s;
+}
+
+#Headline_l1 {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 4.8s;
+}
+
+#Headline_i1-2 {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 5s;
+}
+#Headline_i2-2 {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 5s;
+}
+
+#Headline_t5 {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 5.2s;
+}
+
+#Headline_i4-2 {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 5.4s;
+}
+
+#Headline_i5 {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 5.4s;
+}
+#Headline_e4 {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 5.6s;
+}
+#Headline_s {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  animation: write 0.2s linear forwards 5.8s;
+}
