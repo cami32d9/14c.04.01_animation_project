@@ -163,6 +163,7 @@ function showTimeline(deathArray, getFatalityIndex) {
 
     function displayInfobox() {
         hideAllInfoboxes();
+        document.querySelector(".touch_closing_div").style.display = "block";
         idAttribute = this.getAttribute("timelineItemID");
         document.querySelector(`[itemID="${idAttribute}"]`).style.display =
             "block";
@@ -193,6 +194,7 @@ document.querySelector(".touch_closing_div").addEventListener("click", hideAllIn
 function hideAllInfoboxes() {
     document.querySelectorAll(".infobox").forEach(infobox => {
         infobox.style.display = "none";
+        document.querySelector(".touch_closing_div").style.display = "none";
     })
 }
 
