@@ -37,7 +37,6 @@ body {
   width: 100vw;
 }
 
-
 /* ----- SPLASH VIDEO ----- */
 
 .background_video {
@@ -238,19 +237,21 @@ body {
   /* ----- INFOBOX ----- */
 
   .infobox {
+    overflow: hidden;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
     z-index: 101;
     position: fixed;
     top: 5vh;
     left: 10vw;
     width: 80vw;
+    max-height: 90vh;
     background-color: palegoldenrod;
     border: 5px solid black;
     border-radius: 3px;
     height: auto;
-    display: none;
+    overflow-y: scroll;
   }
 
   .infobox_image_container {
@@ -263,31 +264,29 @@ body {
     animation-timing-function: ease-in-out;
   }
 
+  .infobox_image {
+    max-width: 100%;
+  }
+
   .infobox_name {
     height: 100px;
     text-align: center;
     max-width: 100%;
   }
 
-  .infobox_name svg {
-    height: 100%;
-    max-width: 100%;
-    width: auto;
-  }
-
   .infobox_details {
-    opacity: 0;
-    margin: 10px;
-    animation-name: fade_in_kf;
-    animation-delay: 3s;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
+    text-align: left;
   }
 
   .touch_closing_div {
     display: none;
     background-color: rgba(169, 116, 108, 0.3);
   }
+
+  /* ----- HELPING CLASSES ----- */
+
+  .mobile_hide_overflow {
+    overflow: hidden;
+  }
+
 }
