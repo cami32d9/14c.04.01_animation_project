@@ -1554,3 +1554,23 @@
   stroke-dashoffset: 650;
   animation: write 0.2s linear forwards 5.8s;
 }
+
+/********* Apple *******/
+
+#Apple_1 {
+  stroke-dasharray: 3100;
+  stroke-dashoffset: 3100;
+  animation: write 0.8s ease-in forwards 5.5s;
+}
+
+#Apple_2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: write 0.8s ease-in forwards 6s;
+}
+
+#Apple_3 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: write 0.8s ease-in forwards 6.5s;
+}

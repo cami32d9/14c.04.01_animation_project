@@ -9,10 +9,10 @@ body {
   font-family: "Caveat", cursive;
   font-size: 16pt;
   background: linear-gradient(
-          180deg,
-          rgba(2, 0, 36, 0) 100vh,
-          rgba(255, 255, 255, 0.5) 200vh,
-          rgba(255, 255, 255, 0.5) 100%
+    180deg,
+    rgba(2, 0, 36, 0) 100vh,
+    rgba(255, 255, 255, 0.5) 200vh,
+    rgba(255, 255, 255, 0.5) 100%
   );
 }
 
@@ -63,12 +63,15 @@ body {
 .headline img {
   width: 100%;
 }
-
+.apple {
+  position: absolute;
+  top: 60vh;
+  left: 45vw;
+}
 .section_container {
   position: relative;
   height: 100vh;
   width: 100vw;
-
 }
 
 /* ----- RULES ----- */
@@ -242,7 +245,6 @@ body {
 /* ----- MEDIA QUERIES ----- */
 
 @media screen and (max-width: 899px) {
-
   /* ----- INFOBOX ----- */
 
   .infobox {
@@ -301,5 +303,4 @@ body {
   .headline {
     padding: 0;
   }
-
 }
