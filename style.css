@@ -57,14 +57,20 @@ body {
   border-radius: 3px;
   text-align: center;
   font-weight: 700;
-  animation: fadeinheadline 10s linear forwards;
 }
 
+<<<<<<< HEAD
+.section_container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+=======
 
 /* ----- RULES ----- */
 
 .rules {
   padding: 20px;
+>>>>>>> eb3259067e50bfe8d7ccd22e3189365499f607fc
 }
 
 /* ----- BOOK ----- */
@@ -138,7 +144,6 @@ body {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
-
 }
 
 /* ----- INFOBOX ----- */
