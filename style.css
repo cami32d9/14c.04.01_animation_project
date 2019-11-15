@@ -280,7 +280,7 @@ body {
 
   .touch_closing_div {
     display: none;
-    background-color: rgba(169, 116, 108, 0.3);
+    background-color: rgb(155, 155, 155);
   }
 
   /* ----- HELPING CLASSES ----- */
