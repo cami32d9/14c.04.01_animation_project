@@ -67,7 +67,21 @@ body {
   position: absolute;
   top: 60vh;
   left: 45vw;
+  transform: rotate(10deg);
 }
+
+.music {
+  position: absolute;
+  top: 0vh;
+  margin: 20px;
+  z-index: 10;
+  animation: fade_in_kf 1s linear;
+}
+.music:hover {
+  cursor: pointer;
+  transform: rotate(10deg);
+}
+
 .section_container {
   position: relative;
   height: 100vh;
