@@ -148,12 +148,6 @@ function showTimeline(deathArray, getFatalityIndex) {
     document
       .querySelector(".book")
       .lastElementChild.addEventListener("mouseover", displayInfobox);
-
-    // QUESTION!: Should the infoboxes disappear on "mouseout" from the fatality_item, or only on "mouseover" on
-    // another item or click outside the items?
-    // document
-    //     .querySelector(".book")
-    //     .lastElementChild.addEventListener("mouseout", hideInfobox);
   } else {
     document
       .querySelector(".book")
@@ -167,11 +161,6 @@ function showTimeline(deathArray, getFatalityIndex) {
     document.querySelector(`[itemID="${idAttribute}"]`).style.display = "block";
     document.querySelector("body").classList.add("mobile_hide_overflow");
   }
-
-  // function hideInfobox() {
-  //     document.querySelector(`[itemID="${idAttribute}"]`).style.display =
-  //         "none";
-  // }
 
   // Adds +1 to the fatalityIndex, so the next person in the array will be used next.
   fatalityIndex++;
@@ -223,4 +212,8 @@ function calculateTimelineGap(deathArray, thisFatalityIndex) {
   }
 
   return daysBetweenDeaths || 0;
+}
+
+function convertDateToJSDate() {
+
 }
