@@ -72,7 +72,6 @@ body {
   left: 50%;
   transform: translateX(-50%) rotate(10deg);
   width: 500px;
-
 }
 
 .apple svg {
@@ -104,16 +103,16 @@ body {
 
 .book_container {
   box-sizing: border-box;
-  background-image: url("elements/background_placeholder.svg");
+  background-image: url("elements/Book_v2.svg");
   background-size: cover;
   max-width: 1000px;
   margin: 0 auto;
-  height: 3430px;
+  height: 3530px;
   transform: rotate3d(1, 1, 1, 5deg);
 }
 
 .book {
-  transform: scale(.9);
+  transform: scale(0.9);
   position: absolute;
   top: -5vh;
   left: 15vw;
@@ -232,7 +231,6 @@ body {
   animation-timing-function: ease-in-out;
 }
 
-
 /* ----- FOOTER ----- */
 
 footer {
@@ -256,8 +254,37 @@ footer h3 {
   margin: 10px 0 0 0;
 }
 
+/******* Blood ******/
+#bloodstain {
+  position: absolute;
+  left: 5vw;
+}
+#blood1 {
+  animation: blood 4s ease-in-out infinite;
+}
+
+#blood2 {
+  animation: blood 4s ease-in-out infinite 1s;
+}
+
+#blood3 {
+  animation: blood 4s ease-in-out infinite 2s;
+}
 
 /* ----- KEYFRAMES ----- */
+
+@keyframes blood {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale3d(1, 1.1, 4);
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
 @keyframes slide_in_kf {
   0% {
