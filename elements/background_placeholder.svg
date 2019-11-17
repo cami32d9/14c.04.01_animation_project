@@ -1,0 +1,8 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="1024" height="3500" viewBox="0 0 1024 3500">
+  <title>background_placeholder</title>
+  <g>
+    <rect x="7.5" y="7.5" width="1009" height="3485" fill="#fcfbd9"/>
+    <path d="M1009,15V3485H15V15h994m15-15H0V3500H1024V0Z"/>
+  </g>
+  <line x1="512" y1="13.9" x2="512" y2="3486.1" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="15"/>
+</svg>

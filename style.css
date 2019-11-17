@@ -19,11 +19,9 @@ body {
 /* ----- HELPING CLASSES ----- */
 
 .center {
-  /* Positions box in the middle of the page*/
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .paper {
@@ -32,7 +30,11 @@ body {
 }
 
 .section_container {
-  /*position: relative;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
   height: 100vh;
   width: 100vw;
 }
@@ -78,8 +80,8 @@ body {
 }
 
 .music {
-  position: absolute;
-  top: 0vh;
+  position: fixed;
+  top: 0;
   margin: 20px;
   z-index: 10;
   animation: fade_in_kf 1s linear;
@@ -89,25 +91,32 @@ body {
   transform: rotate(10deg);
 }
 
-.section_container {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-}
-
 /* ----- RULES ----- */
 
 .rules {
+  display: inline-block;
   padding: 20px;
+  margin: 10px;
+  font-size: 2rem;
 }
 
 /* ----- BOOK ----- */
 
-.book {
-  padding-top: 30px;
+.book_container {
+  box-sizing: border-box;
+  background-image: url("elements/background_placeholder.svg");
+  background-size: cover;
   max-width: 1000px;
   margin: 0 auto;
-  padding-bottom: 600px;
+  height: 3430px;
+  transform: rotate3d(1, 1, 1, 5deg);
+}
+
+.book {
+  transform: scale(.9);
+  position: absolute;
+  top: -5vh;
+  left: 15vw;
 }
 
 .timeline_item {
@@ -178,7 +187,6 @@ body {
 /* ----- INFOBOX ----- */
 
 .touch_closing_div {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
