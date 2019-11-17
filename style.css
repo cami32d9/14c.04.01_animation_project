@@ -102,11 +102,21 @@ body {
 
 /* ----- BOOK ----- */
 
-.book {
-  padding-top: 30px;
+.book_container {
+  box-sizing: border-box;
+  background-image: url("elements/background_placeholder.svg");
+  background-size: cover;
   max-width: 1000px;
   margin: 0 auto;
-  padding-bottom: 600px;
+  height: 3430px;
+  transform: rotate3d(1, 1, 1, 5deg);
+}
+
+.book {
+  transform: scale(.9);
+  position: absolute;
+  top: -5vh;
+  left: 15vw;
 }
 
 .timeline_item {
@@ -177,7 +187,6 @@ body {
 /* ----- INFOBOX ----- */
 
 .touch_closing_div {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;

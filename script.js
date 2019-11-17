@@ -176,7 +176,7 @@ function showTimeline(deathArray, getFatalityIndex) {
     if (deathArray.length > fatalityIndex) {
         setTimeout(function () {
             showTimeline(deathArray, fatalityIndex);
-        }, 2000);
+        }, 20);
     }
 }
 
