@@ -80,8 +80,8 @@ body {
 }
 
 .music {
-  position: absolute;
-  top: 0vh;
+  position: fixed;
+  top: 0;
   margin: 20px;
   z-index: 10;
   animation: fade_in_kf 1s linear;
