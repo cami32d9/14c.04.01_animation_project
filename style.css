@@ -105,9 +105,9 @@ body {
   box-sizing: border-box;
   background-image: url("elements/Book_v2.svg");
   background-size: cover;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
-  height: 3530px;
+  height: 3630px;
   transform: rotate3d(1, 1, 1, 5deg);
 }
 
