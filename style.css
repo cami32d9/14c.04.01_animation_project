@@ -32,7 +32,7 @@ body {
 }
 
 .section_container {
-  position: relative;
+  /*position: relative;*/
   height: 100vh;
   width: 100vw;
 }
@@ -52,7 +52,7 @@ body {
   /*background-color: rgba(0, 0, 0, 0.5);*/
   padding: 50px;
   color: white;
-  max-width: 90%;
+  max-width: 90vw;
   /*font-size: 5.5rem;*/
   width: fit-content;
   border-radius: 3px;
@@ -60,14 +60,21 @@ body {
   font-weight: 700;
 }
 
-.headline img {
+.headline svg {
   width: 100%;
 }
+
 .apple {
   position: absolute;
   top: 60vh;
-  left: 45vw;
-  transform: rotate(10deg);
+  left: 50%;
+  transform: translateX(-50%) rotate(10deg);
+  width: 500px;
+
+}
+
+.apple svg {
+  width: 100%;
 }
 
 .music {
@@ -100,7 +107,7 @@ body {
   padding-top: 30px;
   max-width: 1000px;
   margin: 0 auto;
-  padding-bottom: 400px;
+  padding-bottom: 600px;
 }
 
 .timeline_item {
@@ -155,6 +162,7 @@ body {
 }
 
 .timeline_line {
+  position: relative;
   background-color: black;
   margin-left: 20px;
   border-radius: 400px;
@@ -170,6 +178,7 @@ body {
 /* ----- INFOBOX ----- */
 
 .touch_closing_div {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -214,6 +223,31 @@ body {
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
 }
+
+
+/* ----- FOOTER ----- */
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  padding: 20px 0 50px 0;
+}
+
+.footer_content {
+  text-align: left;
+  width: fit-content;
+  padding: 20px;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer h3 {
+  margin: 10px 0 0 0;
+}
+
 
 /* ----- KEYFRAMES ----- */
 
@@ -316,5 +350,11 @@ body {
 
   .headline {
     padding: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .apple {
+    width: 150px;
   }
 }
