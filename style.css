@@ -238,6 +238,12 @@ footer {
   width: 400px;
   height: 0;
   display: none;
+  font-family: "Roboto", sans-serif;
+}
+.infobox b {
+  font-size: 1.3em;
+  font-family: "Caveat", cursive;
+  font-weight: 700;
 }
 
 .infobox_image_container {
