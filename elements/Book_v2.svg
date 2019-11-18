@@ -1,21 +1,20 @@
 <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1283.74" height="4507.16" viewBox="0 0 1283.74 4507.16">
   <defs>
-    <linearGradient id="linear-gradient" x1="36.23" y1="2127.28" x2="1247.84" y2="2192.81" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#ffff8d"/>
-      <stop offset="0.01" stop-color="#ffff92"/>
-      <stop offset="0.12" stop-color="#ffffb9"/>
-      <stop offset="0.22" stop-color="#ffffd7"/>
-      <stop offset="0.32" stop-color="#ffffed"/>
-      <stop offset="0.42" stop-color="#fffffb"/>
+    <linearGradient id="New_Gradient_Swatch_2" data-name="New Gradient Swatch 2" x1="56.62" y1="2151.83" x2="1234.55" y2="2151.83" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f7efa4"/>
+      <stop offset="0.07" stop-color="#f9f3b9"/>
+      <stop offset="0.18" stop-color="#fcf8d7"/>
+      <stop offset="0.3" stop-color="#fdfced"/>
+      <stop offset="0.41" stop-color="#fffefb"/>
       <stop offset="0.51" stop-color="#fff"/>
-      <stop offset="0.59" stop-color="#fffff7"/>
-      <stop offset="0.72" stop-color="#ffffe0"/>
-      <stop offset="0.88" stop-color="#ffb"/>
-      <stop offset="1" stop-color="#ff9"/>
+      <stop offset="0.6" stop-color="#fefef7"/>
+      <stop offset="0.76" stop-color="#fcf9e0"/>
+      <stop offset="0.95" stop-color="#f9f3bb"/>
+      <stop offset="1" stop-color="#f8f1b1"/>
     </linearGradient>
   </defs>
   <title>Book_v2</title>
   <path id="Black_right" d="M1217.28,81c22.81,50.12,37.76,132.74,36.87,281.46l-1.52,3761.4c-3.67,74.91-16.6,117.32-41.05,119.52-173.69,98.48-372.81,56.83-585.6-25.61-292.57,80.66-478.25,29.14-533.95-19.2-27.69-24-26.14-106.58-35.41-143L88,169.68C97,40.24,116.43,11.6,139.74,19.31c8.33,3,19,3.85,30.36,7.38C297.48,66.21,491,68.65,614,90.27c7,1.22,5.15,1,12.26,1C810.84,92,1063.82,99.45,1217.28,81Z" stroke="#000" stroke-miterlimit="3.33" stroke-width="0.33"/>
-  <path id="Right_side" d="M631.66,103.12c213.86,23.93,403.71,9.24,563.69-1.19,22.56,50.12,37.35,132.19,36.61,279.8l2.59,3726.15c-3.45,74.36-16.15,116.22-40.31,117.32-169.93,79.52-372.78,88.73-575.65-16.6-155.4,77.82-331.27,64.48-531.77-15.34-20.95-41.86-28.35-105.75-30.2-177.91l26.75-3849C92.12,38,111.23,10.5,134,18.76,334.48,93.52,483.51,90.34,631.66,103.12Z" stroke="#000" stroke-miterlimit="3.33" stroke-width="0.33" fill="url(#linear-gradient)"/>
+  <path id="Right_side" d="M631.66,103.12c213.86,23.93,403.71,9.24,563.69-1.19,22.56,50.12,37.35,132.19,36.61,279.8l2.59,3726.15c-3.45,74.36-16.15,116.22-40.31,117.32-169.93,79.52-372.78,88.73-575.65-16.6-155.4,77.82-331.27,64.48-531.77-15.34-20.95-41.86-28.35-105.75-30.2-177.91l26.75-3849C92.12,38,111.23,10.5,134,18.76,334.48,93.52,483.51,90.34,631.66,103.12Z" stroke="#000" stroke-miterlimit="3.33" stroke-width="0.33" fill="url(#New_Gradient_Swatch_2)"/>
   <path id="Middle_line" d="M623.93,96.53v500.9l-.34,736.26V3478l-5,282c-10.77,123.73-9.53,459.84,23.35,543.39-25.51,48.38,149.09,211.64,241.48,127.41-178.12.39-213.89-78.11-245.15-131.94" stroke="#000" stroke-miterlimit="3.33" stroke-width="15"/>
 </svg>
