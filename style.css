@@ -16,6 +16,27 @@ body {
   );
 }
 
+/******** Scrollbar ******/
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fffdde;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 /* ----- HELPING CLASSES ----- */
 
 .center {
@@ -25,10 +46,26 @@ body {
 }
 
 .paper {
-  background-color: #ffffe1;
-  border-radius: 3px;
+  display: flex;
+  background-image: url("elements/paper.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  width: 50vw;
+  height: 50vh;
 }
-
+footer {
+  width: 100%;
+  background-color: palegoldenrod;
+}
+.paper p {
+  margin-top: 10vh;
+}
+.bloodstain_note {
+  position: absolute;
+  top: 50vh;
+  left: 30vw;
+}
 .section_container {
   display: flex;
   justify-content: center;
@@ -111,7 +148,7 @@ body {
   background-size: cover;
   max-width: 1200px;
   margin: 0 auto;
-  height: 3630px;
+  height: 4230px;
   transform: rotate3d(1, 1, 1, 3deg);
   padding-top: 150px;
 }
@@ -135,7 +172,9 @@ body {
   display: flex;
   justify-content: space-between;
 }
-
+.timeline_item:hover {
+  cursor: pointer;
+}
 .not_touch_device_item .timeline_item:hover {
   transform: scale(1.1) translateX(7px);
 }
