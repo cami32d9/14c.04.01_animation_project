@@ -3,9 +3,12 @@
 document.addEventListener("DOMContentLoaded", getTimelineJson);
 
 let itemID = 0;
-let nameSVG;
-let svgIndex = 0;
 let fatalityIndex;
+
+let headline;
+let headlineApple;
+let bloodStain;
+let svgIndex = 0;
 
 // ----- CHECKING IF TOUCH- OR MOUSE DEVICE -----
 
@@ -52,8 +55,27 @@ async function getTimelineJson() {
 
 // Fetching the necessary SVGs (currently only the animated names) for each person found in the json fetched before.
 function fetchSVGs(deathArray) {
+
+  // Fetch specific SVGs we need
+  const headlineSVG = fetch("elements/Headline_name.svg").then(r => r.text());
+  const appleSVG = fetch("elements/Apple_name.svg").then(r => r.text());
+  const bloodStainSVG = fetch("elements/blood.svg").then(r => r.text());
+
+  Promise
+      .all([headlineSVG, appleSVG, bloodStainSVG])
+      .then(
+          function (responses) {
+            const [headlineSVG, appleSVG, bloodStainSVG] = responses;
+            headline = headlineSVG;
+            headlineApple = appleSVG;
+            bloodStain = bloodStainSVG;
+          }
+      );
+
+
+  // Fetch names from elements-folder, based on first names in the json.
   deathArray.forEach(fatality => {
-    nameSVG = fetch(`elements/${fatality.firstname}_name.svg`).then(r =>
+    const nameSVG = fetch(`elements/${fatality.firstname}_name.svg`).then(r =>
       r.text()
     );
 
@@ -69,6 +91,11 @@ function fetchSVGs(deathArray) {
 }
 
 function start(deathArray) {
+  document.querySelector(".headline").innerHTML = headline;
+  document.querySelector(".apple").innerHTML = headlineApple;
+  document.querySelector(".bloodstain_note").innerHTML = bloodStain;
+  document.querySelector("#bloodstain").innerHTML = bloodStain;
+
   const musicButton = document.querySelector(".music");
   const music = document.querySelector("#l_theme");
 
