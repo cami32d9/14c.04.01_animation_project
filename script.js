@@ -71,6 +71,10 @@ function fetchSVGs(deathArray) {
 function start(deathArray) {
   const musicButton = document.querySelector(".music");
   const music = document.querySelector("#l_theme");
+
+    const musicOnButton = musicButton.querySelector(".music_on_button");
+    const musicOffButton = musicButton.querySelector(".music_off_button");
+
   let musicIsPlaying = false;
 
   musicButton.addEventListener("click", function() {
@@ -78,10 +82,14 @@ function start(deathArray) {
       console.log("Start music");
       music.play();
       musicIsPlaying = true;
+        musicOnButton.style.display = "block";
+        musicOffButton.style.display = "none";
     } else {
       console.log("Stop music");
       music.pause();
       musicIsPlaying = false;
+        musicOnButton.style.display = "none";
+        musicOffButton.style.display = "block";
     }
   });
 

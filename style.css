@@ -115,6 +115,8 @@ footer {
   width: 100%;
 }
 
+/* ----- MUSIC ----- */
+
 .music {
   opacity: 0;
   position: fixed;
@@ -129,6 +131,10 @@ footer {
 .music:hover {
   cursor: pointer;
   transform: rotate(10deg);
+}
+
+.music_on_button {
+  display: none;
 }
 
 /* ----- RULES ----- */
