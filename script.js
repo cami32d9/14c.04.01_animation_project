@@ -17,11 +17,6 @@ function getTouchDeviceClass() {
         : "not_touch_device_item";
 }
 
-function playAudio(url) {
-    var a = new Audio(url);
-    a.play();
-}
-
 // Function that checks if the device is a touch device or not.
 // bolmaster2, updated 2018.
 // https://stackoverflow.com/questions/4817029/whats-the-best-way-to-detect-a-touch-screen-device-using-javascript/19299994#19299994
@@ -67,10 +62,33 @@ function fetchSVGs(deathArray) {
             fatality.namesvg = nameSVG;
             svgIndex++;
             if (svgIndex === deathArray.length) {
-                showTimeline(deathArray, 0);
+                start(deathArray);
             }
         });
     });
+}
+
+function start(deathArray) {
+
+    const musicButton = document.querySelector(".music");
+    const music = document.querySelector("#l_theme");
+    let musicIsPlaying = false;
+
+    musicButton.addEventListener("click", function() {
+        if (!musicIsPlaying) {
+            console.log("Start music");
+            music.play();
+            musicIsPlaying = true;
+        }
+
+        else {
+            console.log("Stop music");
+            music.pause();
+            musicIsPlaying = false;
+        }
+    });
+
+    showTimeline(deathArray, 0);
 }
 
 // Shows the timeline with the deathArray defined from the json, and the "fatalityIndex" - an index making sure the
