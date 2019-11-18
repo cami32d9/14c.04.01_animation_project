@@ -25,7 +25,7 @@ body {
 }
 
 .paper {
-  background-color: palegoldenrod;
+  background-color: #ffffe1;
   border-radius: 3px;
 }
 
@@ -79,12 +79,16 @@ body {
 }
 
 .music {
+  opacity: 0;
   position: fixed;
   top: 0;
   margin: 20px;
   z-index: 10;
   animation: fade_in_kf 1s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
 }
+
 .music:hover {
   cursor: pointer;
   transform: rotate(10deg);
@@ -108,14 +112,12 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   height: 3630px;
-  transform: rotate3d(1, 1, 1, 5deg);
+  transform: rotate3d(1, 1, 1, 3deg);
+  padding-top: 150px;
 }
 
 .book {
-  transform: scale(0.9);
-  position: absolute;
-  top: -5vh;
-  left: 15vw;
+  transform: rotate3d(1, 1, 1, 1deg);
 }
 
 .timeline_item {

@@ -176,7 +176,7 @@ function showTimeline(deathArray, getFatalityIndex) {
     if (deathArray.length > fatalityIndex) {
         setTimeout(function () {
             showTimeline(deathArray, fatalityIndex);
-        }, 20);
+        }, 2000);
     }
 }
 
@@ -223,8 +223,8 @@ function renderDate(givenDate) {
 
     let thisDate = new Date(givenDate);
 
-    // Only gives an output if the date is valid, so "invalid" dates will keep original text string or get "Unknown".
-    if (thisDate !== "Invalid Date") {
+    // Only gives an output if the date is valid, so "invalid" dates will keep original text string or stay empty.
+    if (thisDate != "Invalid Date") {
 
       // "month" is added +1, because JS starts the months at 0 for January, instead of 1 for January.
         let year = thisDate.getFullYear();
