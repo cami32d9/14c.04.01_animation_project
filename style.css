@@ -107,6 +107,7 @@ footer {
 /* ----- MUSIC ----- */
 
 .music {
+  width: 150px;
   opacity: 0;
   position: fixed;
   top: 0;
@@ -115,6 +116,10 @@ footer {
   animation: fade_in_kf 1s linear;
   animation-fill-mode: forwards;
   animation-delay: 3s;
+}
+
+.music img {
+  width: 100%;
 }
 
 .music:hover {
@@ -180,6 +185,7 @@ footer {
 }
 
 .fatality_item_container {
+  cursor: default;
   max-width: 100%;
   margin: 0 10%;
 }
@@ -530,10 +536,6 @@ footer h3 {
   .music {
     right: 0;
     width: 120px;
-  }
-
-  .music img {
-    width: 100%;
   }
 }
 
