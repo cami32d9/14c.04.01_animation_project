@@ -11,6 +11,28 @@ let bloodStain;
 let svgIndex = 0;
 
 
+// ----- INTERSECTION OBSERVER -----
+
+const elms = document.querySelectorAll('.intersect');
+
+const config = {
+  root: null,
+  rootMargin: '0px',
+  threshold: [0, .25, .75, 1]
+};
+
+let observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.intersectionRatio > .25) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, config);
+
+elms.forEach(elem => {
+  observer.observe(elem);
+});
+
 
 // ----- CHECKING IF TOUCH- OR MOUSE DEVICE -----
 

@@ -567,6 +567,14 @@ footer h3 {
     opacity: .5;
   }
 
+.intersect {
+  opacity: 0;
+  transition: all 3s;
+}
+
+.intersect.visible {
+  opacity: 1;
+}
   .bloodstain_note svg {
     height: 70px;
   }
