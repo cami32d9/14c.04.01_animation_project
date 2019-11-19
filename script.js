@@ -204,8 +204,11 @@ function showTimeline(deathArray, getFatalityIndex) {
   }
 
   function displayInfobox() {
+    console.log("Define me!");
     hideAllInfoboxes();
-    document.querySelector(".touch_closing_div").style.display = "block";
+    document.querySelectorAll(".touch_closing_div").forEach(div => {
+      div.style.display = "block";
+    });
     idAttribute = this.getAttribute("timelineItemID");
     document.querySelector(`[itemID="${idAttribute}"]`).style.display = "block";
     document.querySelector("body").classList.add("mobile_hide_overflow");
@@ -225,13 +228,16 @@ function showTimeline(deathArray, getFatalityIndex) {
 }
 
 document
-  .querySelector(".touch_closing_div")
-  .addEventListener("click", hideAllInfoboxes);
+  .querySelectorAll(".touch_closing_div").forEach(div => {
+    div.addEventListener("click", hideAllInfoboxes);
+});
 
 function hideAllInfoboxes() {
   document.querySelectorAll(".infobox").forEach(infobox => {
     infobox.style.display = "none";
-    document.querySelector(".touch_closing_div").style.display = "none";
+    document.querySelectorAll(".touch_closing_div").forEach(div => {
+      div.style.display = "none";
+    });
     document.querySelector("body").classList.remove("mobile_hide_overflow");
   });
 }

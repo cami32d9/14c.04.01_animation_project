@@ -159,8 +159,8 @@ footer {
   max-width: 1200px;
   margin: 0 auto;
   height: 4430px;
-  transform: rotate3d(1, 1, 1, 3deg);
   padding-top: 170px;
+  transform: rotate3d(1, 1, 1, 3deg);
 }
 
 .book {
@@ -235,7 +235,6 @@ footer {
 /* ----- INFOBOX ----- */
 
 .touch_closing_div {
-  background-color: pink;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -243,6 +242,10 @@ footer {
   left: 0;
   width: 100vw;
   height: 100vh;
+}
+
+.close-2 {
+  height: 100%;
 }
 
 .infobox {
@@ -391,6 +394,10 @@ footer h3 {
   .book_container {
     transform: none;
   }
+
+  .book {
+    transform: none;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -408,6 +415,10 @@ footer h3 {
 
 @media screen and (max-width: 899px) {
   /* ----- INFOBOX ----- */
+
+  .book_container {
+    height: 3300px;
+  }
 
   .infobox {
     box-sizing: border-box;
@@ -452,7 +463,7 @@ footer h3 {
 
   .touch_closing_div {
     display: none;
-    background-color: rgb(155, 155, 155);
+    background-color: rgba(155, 155, 155, .5);
   }
 
   /* ----- HELPING CLASSES ----- */
