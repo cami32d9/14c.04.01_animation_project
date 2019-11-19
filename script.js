@@ -10,6 +10,8 @@ let headlineApple;
 let bloodStain;
 let svgIndex = 0;
 
+
+
 // ----- CHECKING IF TOUCH- OR MOUSE DEVICE -----
 
 const touchDeviceClass = getTouchDeviceClass();

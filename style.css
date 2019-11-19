@@ -49,27 +49,12 @@ body {
   align-items: center;
 }
 
-.paper {
-  display: flex;
-  background-image: url("elements/paper.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  text-align: center;
-  width: 50vw;
-  height: 50vh;
-}
+
 footer {
   width: 100%;
   background-color: var(--paper-color);
 }
-.paper p {
-  margin-top: 10vh;
-}
-.bloodstain_note {
-  position: absolute;
-  top: 50vh;
-  left: 30vw;
-}
+
 .section_container {
   display: flex;
   justify-content: center;
@@ -144,10 +129,32 @@ footer {
 /* ----- RULES ----- */
 
 .rules {
-  display: inline-block;
-  padding: 20px;
-  margin: 10px;
+  position: relative;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  background-image: url("elements/paper.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  height: 350px;
   font-size: 2rem;
+}
+
+.bloodstain_note {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+}
+
+.rules p {
+  margin: 0;
+}
+
+.rules svg {
+  width: 100%;
 }
 
 /* ----- BOOK ----- */
@@ -475,10 +482,76 @@ footer h3 {
   .headline {
     padding: 0;
   }
+
+/* ----- RULES ----- */
+
+  .rules {
+    padding-bottom: 100px;
+    width: 600px;
+    height: 200px;
+  }
+
+  .rules p {
+    width: 70%;
+    text-align: center;
+  }
+
+  .bloodstain_note {
+    left: auto;
+    right: 50px;
+    top: auto;
+    bottom: 0;
+    width: 20%;
+  }
+
+
+/* ----- FOOTER ----- */
+  #bloodstain {
+    left: auto;
+    right: 0;
+    width: 170px;
+  }
+
+  #bloodstain svg {
+    height: 100px;
+  }
+
+
 }
 
 @media screen and (max-width: 767px) {
   .apple {
     width: 150px;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  /* ----- RULES ----- */
+
+  .rules {
+    background-image: none;
+    background-color: var(--paper-color);
+    height: auto;
+    margin: 5%;
+    padding: 20px 0;
+  }
+
+  .rules p {
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .bloodstain_note {
+    top: 0;
+    bottom: auto;
+    right: 0;
+    height: 100px;
+    opacity: .5;
+  }
+
+  .bloodstain_note svg {
+    height: 70px;
   }
 }
