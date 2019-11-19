@@ -405,6 +405,9 @@ footer h3 {
   .book {
     transform: none;
   }
+  .music {
+    right: 30px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -522,6 +525,15 @@ footer h3 {
 @media screen and (max-width: 767px) {
   .apple {
     width: 150px;
+  }
+
+  .music {
+    right: 0;
+    width: 120px;
+  }
+
+  .music img {
+    width: 100%;
   }
 }
 

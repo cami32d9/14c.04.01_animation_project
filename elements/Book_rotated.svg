@@ -1,0 +1,20 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="4502.01" viewBox="0 0 1200 4502.01">
+  <defs>
+    <linearGradient id="linear-gradient" x1="49.16" y1="2348.23" x2="1135.41" y2="2348.23" gradientTransform="matrix(0.97, 0.03, 0.03, -1, -44.35, 4505.11)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f7efa4"/>
+      <stop offset="0.07" stop-color="#f9f3b9"/>
+      <stop offset="0.18" stop-color="#fcf8d7"/>
+      <stop offset="0.3" stop-color="#fdfced"/>
+      <stop offset="0.41" stop-color="#fffefb"/>
+      <stop offset="0.51" stop-color="#fff"/>
+      <stop offset="0.6" stop-color="#fefef7"/>
+      <stop offset="0.76" stop-color="#fcf9e0"/>
+      <stop offset="0.95" stop-color="#f9f3bb"/>
+      <stop offset="1" stop-color="#f8f1b1"/>
+    </linearGradient>
+  </defs>
+  <title>Book_rotated</title>
+  <path id="Black_right" data-name="Black right" d="M1153.34,119.5c19,50.72,30.23,133.72,25.58,282.35l-98.74,3759.88c-5.21,74.78-17.84,116.82-39.69,118.36-157.39,93.72-333.82,46.68-521.38-41.51-262.9,72.68-427.1,16.14-475.5-33.69C19.55,4180.14,23.07,4097.64,15.75,4061L144.33,177.47c11.38-129.14,29.44-157.24,50-148.9,7.35,3.22,16.84,4.36,26.87,8.2,112.54,43,285,50.66,394.08,75.61,6.21,1.41,4.56,1.14,10.9,1.34C790.73,119.46,1016.06,133.78,1153.34,119.5Z" stroke="#000" stroke-miterlimit="3.33" stroke-width="0.33"/>
+  <path id="Right_side" data-name="Right side" d="M630.71,125.71c190,29.73,359.65,20.2,502.54,14.12,18.81,50.71,29.87,133.15,25.39,280.68l-94.17,3724.76c-5,74.23-17.4,115.73-39,116.17C872,4336.32,690.88,4340,512.76,4229.21c-140.55,73.57-297,55.46-473.66-29.77C21.51,4157,16.57,4093,16.79,4020.78L140.29,174C151.41,46,169.16,19,189.25,27.86,366,108,499,108.91,630.71,125.71Z" stroke="#000" stroke-miterlimit="3.33" stroke-width="0.33" fill="url(#linear-gradient)"/>
+  <path id="Middle_line" data-name="Middle line" d="M624,118.91l-13,500.7-19.37,736L536.13,3499l-11.76,281.75c-12.8,123.39-20.4,459.4,6.75,543.81-24,47.67,127.43,215.61,212,133.92C584.3,4454.07,554.44,4374.63,528,4320" stroke="#000" stroke-miterlimit="3.33" stroke-width="15"/>
+</svg>
