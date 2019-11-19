@@ -1,3 +1,7 @@
+:root {
+  --paper-color: #ffffe1;
+}
+
 html {
   background-color: black;
 }
@@ -56,7 +60,7 @@ body {
 }
 footer {
   width: 100%;
-  background-color: palegoldenrod;
+  background-color: var(--paper-color);
 }
 .paper p {
   margin-top: 10vh;
@@ -154,9 +158,9 @@ footer {
   background-size: cover;
   max-width: 1200px;
   margin: 0 auto;
-  height: 4230px;
+  height: 4430px;
   transform: rotate3d(1, 1, 1, 3deg);
-  padding-top: 150px;
+  padding-top: 170px;
 }
 
 .book {
@@ -178,9 +182,7 @@ footer {
   display: flex;
   justify-content: space-between;
 }
-.timeline_item:hover {
-  cursor: pointer;
-}
+
 .not_touch_device_item .timeline_item:hover {
   transform: scale(1.1) translateX(7px);
 }
@@ -233,8 +235,11 @@ footer {
 /* ----- INFOBOX ----- */
 
 .touch_closing_div {
+  background-color: pink;
   position: fixed;
   top: 0;
+  bottom: 0;
+  right: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
@@ -245,9 +250,11 @@ footer {
   height: 0;
   display: none;
   font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
 }
+
 .infobox b {
-  font-size: 1.3em;
+  font-size: 1.6rem;
   font-family: "Caveat", cursive;
   font-weight: 700;
 }
@@ -380,11 +387,29 @@ footer h3 {
 
 /* ----- MEDIA QUERIES ----- */
 
+@media screen and (max-width: 1300px) {
+  .book_container {
+    transform: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .book_container {
+    padding-top: 50px;
+    background-image: none;
+    background-color: var(--paper-color);
+    margin: 5%;
+  }
+
+  .fatality_item_container {
+    margin: 0 3%;
+  }
+}
+
 @media screen and (max-width: 899px) {
   /* ----- INFOBOX ----- */
 
   .infobox {
-    overflow: hidden;
     box-sizing: border-box;
     padding: 20px;
     text-align: center;
@@ -394,7 +419,7 @@ footer h3 {
     left: 10vw;
     width: 80vw;
     max-height: 90vh;
-    background-color: palegoldenrod;
+    background-color: var(--paper-color);
     border: 5px solid black;
     border-radius: 3px;
     height: auto;

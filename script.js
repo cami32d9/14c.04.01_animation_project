@@ -106,13 +106,11 @@ function start(deathArray) {
 
   musicButton.addEventListener("click", function() {
     if (!musicIsPlaying) {
-      console.log("Start music");
       music.play();
       musicIsPlaying = true;
         musicOnButton.style.display = "block";
         musicOffButton.style.display = "none";
     } else {
-      console.log("Stop music");
       music.pause();
       musicIsPlaying = false;
         musicOnButton.style.display = "none";
@@ -137,9 +135,6 @@ function showTimeline(deathArray, getFatalityIndex) {
 
   let renderedBirthDate = renderDate(fatality.birth);
   let renderedDeathDate = renderDate(fatality.death);
-
-  // console.log(renderedBirthDate);
-  // console.log(renderedDeathDate);
 
   const timelineTemplate = document
     .querySelector(".timeline_template")
