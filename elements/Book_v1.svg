@@ -1,0 +1,20 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1295.61" height="940" viewBox="0 0 1295.61 940">
+  <defs>
+    <linearGradient id="New_Gradient_Swatch_2" data-name="New Gradient Swatch 2" x1="44.35" y1="447.57" x2="1222.28" y2="447.57" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f7efa4"/>
+      <stop offset="0.07" stop-color="#f9f3b9"/>
+      <stop offset="0.18" stop-color="#fcf8d7"/>
+      <stop offset="0.3" stop-color="#fdfced"/>
+      <stop offset="0.41" stop-color="#fffefb"/>
+      <stop offset="0.51" stop-color="#fff"/>
+      <stop offset="0.6" stop-color="#fefef7"/>
+      <stop offset="0.76" stop-color="#fcf9e0"/>
+      <stop offset="0.95" stop-color="#f9f3bb"/>
+      <stop offset="1" stop-color="#f8f1b1"/>
+    </linearGradient>
+  </defs>
+  <title>Book_v1</title>
+  <path id="Black_right" d="M1205,48.86c22.81,9.46,37.76,25.05,36.87,53.12l-1.52,709.87c-3.67,14.14-16.6,22.14-41.05,22.56-173.76,33.85-372.91,32.86-585.6-4.83-290.37,28.66-477,12.83-533.94-3.62-27-7.8-26.14-20.11-35.41-27L75.78,65.6c9-24.43,28.38-29.83,51.7-28.38,8.33.56,19,.29,30.36,1.39,123.06,12,310.36,18.89,443.93,12,7-.36,5.15-.2,12.26.19C795.72,60.77,1049.07,60.91,1205,48.86Z" stroke="#000" stroke-miterlimit="3.33" stroke-width="0.33"/>
+  <path id="Right_side" d="M619.39,59.33C838.63,85,1025.11,69,1183.09,59.11c22.56,9.38,37.35,24.75,36.61,52.39l2.59,697.63c-3.45,13.92-16.15,21.76-40.31,22C1012,860.52,809.16,858,606.32,828c-174.73,23.6-360.15,25.57-531.77-2.87-21-7.84-28.35-19.8-30.2-33.31L71.1,71.17C79.85,47.14,99,42,121.76,43.54,318,67.69,466.61,68,619.39,59.33Z" stroke="#000" stroke-miterlimit="3.33" stroke-width="0.33" fill="url(#New_Gradient_Swatch_2)"/>
+  <path id="Middle_line" d="M604.45,58.1v97.68l-.12,143.59V717.55l-1.83,55c-3.95,24.13-3.49,89.68,8.56,106-9.35,9.44,54.67,41.27,88.55,24.85-65.32.08-78.44-15.23-89.9-25.73" stroke="#000" stroke-miterlimit="3.33" stroke-width="15"/>
+</svg>
