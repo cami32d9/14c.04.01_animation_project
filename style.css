@@ -401,6 +401,44 @@ footer h3 {
   }
 }
 
+
+/* ----- INTERSECTION OBSERVER ----- */
+
+.observation_content {
+  color: transparent;
+  line-height: 75px;
+}
+
+.fatality_item {
+  display: none;
+}
+
+.timeline_line_container {
+  display: none;
+}
+
+.visible .observation_content {
+  display: none;
+}
+
+.visible .fatality_item {
+  display: flex;
+}
+
+.visible .timeline_line_container {
+  display: block;
+}
+
+.observe_this.fade_in {
+  transition: 2s;
+  opacity: 0;
+}
+
+.observe_this.fade_in.visible {
+  opacity: 1;
+}
+
+
 /* ----- MEDIA QUERIES ----- */
 
 @media screen and (max-width: 1300px) {
@@ -570,38 +608,4 @@ footer h3 {
   .bloodstain_note svg {
     height: 70px;
   }
-}
-
-.observation_content {
-  color: transparent;
-  line-height: 75px;
-}
-
-.fatality_item {
-  display: none;
-}
-
-.timeline_line_container {
-  display: none;
-}
-
-.visible .observation_content {
-  display: none;
-}
-
-.visible .fatality_item {
-  display: flex;
-}
-
-.visible .timeline_line_container {
-  display: block;
-}
-
-.observe_this.fade_in {
-  transition: 2s;
-  opacity: 0;
-}
-
-.observe_this.fade_in.visible {
-  opacity: 1;
 }
