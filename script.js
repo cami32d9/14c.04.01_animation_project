@@ -10,30 +10,6 @@ let headlineApple;
 let bloodStain;
 let svgIndex = 0;
 
-
-// ----- INTERSECTION OBSERVER -----
-
-const elms = document.querySelectorAll('.intersect');
-
-const config = {
-  root: null,
-  rootMargin: '0px',
-  threshold: [0, .25, .75, 1]
-};
-
-let observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.intersectionRatio > .25) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, config);
-
-elms.forEach(elem => {
-  observer.observe(elem);
-});
-
-
 // ----- CHECKING IF TOUCH- OR MOUSE DEVICE -----
 
 const touchDeviceClass = getTouchDeviceClass();
@@ -168,8 +144,8 @@ function showTimeline(deathArray, getFatalityIndex) {
 
   // Adding details to the item on the timeline.
   timelineTemplate
-    .querySelector(".fatality_item_container")
-    .setAttribute("timelineItemID", `${itemID}`);
+      .querySelector(".fatality_item_container")
+      .setAttribute("timelineItemID", `${itemID}`);
   timelineTemplate
     .querySelector(".infobox")
     .setAttribute("itemID", `${itemID}`);
@@ -228,7 +204,6 @@ function showTimeline(deathArray, getFatalityIndex) {
   }
 
   function displayInfobox() {
-    console.log("Define me!");
     hideAllInfoboxes();
     document.querySelectorAll(".touch_closing_div").forEach(div => {
       div.style.display = "block";
@@ -245,10 +220,37 @@ function showTimeline(deathArray, getFatalityIndex) {
   // We might be able to do this with an "animationend" listener instead, to be sure the first name is written
   // before the next starts appearing?
   if (deathArray.length > fatalityIndex) {
-    setTimeout(function() {
       showTimeline(deathArray, fatalityIndex);
-    }, 2000);
   }
+
+  else {
+    observeTimeline();
+  }
+}
+
+function observeTimeline() {
+  // ----- INTERSECTION OBSERVER -----
+
+// From slides, and edited for our use.
+  const elms = document.querySelectorAll('.observe_this');
+
+  const config = {
+    root: null,
+    rootMargin: '0px',
+    threshold: [0, .25, .75, 1]
+  };
+
+  let observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.intersectionRatio > .75) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, config);
+
+  elms.forEach(elem => {
+    observer.observe(elem);
+  });
 }
 
 document
