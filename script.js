@@ -91,6 +91,7 @@ function fetchSVGs(deathArray) {
 }
 
 function start(deathArray) {
+
   document.querySelector(".headline").innerHTML = headline;
   document.querySelector(".apple").innerHTML = headlineApple;
   document.querySelector(".bloodstain_note").innerHTML = bloodStain;
@@ -179,28 +180,31 @@ function showTimeline(deathArray, getFatalityIndex) {
       .querySelector(".book_timeline")
       .lastElementChild.addEventListener("click", displayInfobox);
 
+
+
+
   function displayInfobox() {
 
+    const infoboxTemplate = document
+        .querySelector(".infobox_template")
+        .content.cloneNode(true);
+
     // Adding details to the infobox.
-    document.querySelector(
-        ".infobox_image"
-    ).src = `elements/${fatality.firstname}.svg`;
-    document.querySelector(".infobox_name").innerHTML = fatality.namesvg;
-    document.querySelector(".infobox_birth_date").innerHTML +=
+    infoboxTemplate.querySelector(
+        ".infobox_image_container"
+    ).innerHTML = `<img class="infobox_image" src="elements/${fatality.firstname}.svg"  alt="Image of character">`;
+    infoboxTemplate.querySelector(".infobox_name").innerHTML = fatality.namesvg;
+    infoboxTemplate.querySelector(".infobox_birth_date").innerHTML +=
         renderedBirthDate || fatality.birth || "Unknown";
-    document.querySelector(".infobox_death_date").innerHTML +=
+    infoboxTemplate.querySelector(".infobox_death_date").innerHTML +=
         renderedDeathDate || fatality.death;
-    document.querySelector(".infobox_story").innerHTML += fatality.story;
-    document.querySelector(".infobox_death_cause").innerHTML +=
+    infoboxTemplate.querySelector(".infobox_story").innerHTML += fatality.story;
+    infoboxTemplate.querySelector(".infobox_death_cause").innerHTML +=
         fatality.causeofdeath;
 
-    // hideAllInfoboxes();
-    // document.querySelectorAll(".touch_closing_div").forEach(div => {
-    //   div.style.display = "block";
-    // });
-    // idAttribute = this.getAttribute("timelineItemID");
-    // document.querySelector(`[itemID="${idAttribute}"]`).style.display = "block";
-    // document.querySelector("body").classList.add("mobile_hide_overflow");
+    document.querySelector(".book_infobox").innerHTML = "";
+    document.querySelector(".book_infobox").appendChild(infoboxTemplate);
+
   }
 
   // Adds +1 to the fatalityIndex, so the next person in the array will be used next.
