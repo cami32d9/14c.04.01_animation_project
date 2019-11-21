@@ -188,18 +188,18 @@ function showTimeline(deathArray, getFatalityIndex) {
     .addEventListener("animationend", function() {});
 
   // Adding the whole item to the HTML using the template.
-  document.querySelector(".book").appendChild(timelineTemplate);
+  document.querySelector(".book_timeline").appendChild(timelineTemplate);
 
   let idAttribute;
 
   // Adds hover function to devices that have a mouse pointer/is not touch.
   if (!isTouchDeviceFunction()) {
     document
-      .querySelector(".book")
+      .querySelector(".book_timeline")
       .lastElementChild.addEventListener("mouseover", displayInfobox);
   } else {
     document
-      .querySelector(".book")
+      .querySelector(".book_timeline")
       .lastElementChild.addEventListener("click", displayInfobox);
   }
 
