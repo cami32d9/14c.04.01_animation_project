@@ -175,10 +175,25 @@ footer {
   /*transform: rotate3d(1, 1, 1, 3deg);*/
 }
 
+.book_content_container {
+  margin-top: 70px;
+  display: flex;
+}
+
 .book_timeline {
   padding-top: 20px;
-  margin-top: 70px;
-  height: 80%;
+  height: 80vh;
+  width: 43%;
+  padding-left: 3%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.book_infobox {
+  padding-top: 20px;
+  height: 80vh;
+  width: 43%;
+  padding-left: 3%;
   overflow: hidden;
   overflow-y: scroll;
 }
