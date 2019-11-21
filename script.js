@@ -146,9 +146,9 @@ function showTimeline(deathArray, getFatalityIndex) {
   timelineTemplate
       .querySelector(".fatality_item_container")
       .setAttribute("timelineItemID", `${itemID}`);
-  timelineTemplate
-    .querySelector(".infobox")
-    .setAttribute("itemID", `${itemID}`);
+  // timelineTemplate
+  //   .querySelector(".infobox")
+  //   .setAttribute("itemID", `${itemID}`);
 
   timelineTemplate
     .querySelector(".fatality_item")
@@ -170,47 +170,37 @@ function showTimeline(deathArray, getFatalityIndex) {
     ).style.height = `${lineLength}px`;
   }
 
-  // Adding details to the infobox.
-  timelineTemplate.querySelector(
-    ".infobox_image"
-  ).src = `elements/${fatality.firstname}.svg`;
-  timelineTemplate.querySelector(".infobox_name").innerHTML = fatality.namesvg;
-  timelineTemplate.querySelector(".infobox_birth_date").innerHTML +=
-    renderedBirthDate || fatality.birth || "Unknown";
-  timelineTemplate.querySelector(".infobox_death_date").innerHTML +=
-    renderedDeathDate || fatality.death;
-  timelineTemplate.querySelector(".infobox_story").innerHTML += fatality.story;
-  timelineTemplate.querySelector(".infobox_death_cause").innerHTML +=
-    fatality.causeofdeath;
-
-  timelineTemplate
-    .querySelector(".infobox_name")
-    .addEventListener("animationend", function() {});
-
   // Adding the whole item to the HTML using the template.
   document.querySelector(".book_timeline").appendChild(timelineTemplate);
 
   let idAttribute;
 
-  // Adds hover function to devices that have a mouse pointer/is not touch.
-  if (!isTouchDeviceFunction()) {
-    document
-      .querySelector(".book_timeline")
-      .lastElementChild.addEventListener("mouseover", displayInfobox);
-  } else {
     document
       .querySelector(".book_timeline")
       .lastElementChild.addEventListener("click", displayInfobox);
-  }
 
   function displayInfobox() {
-    hideAllInfoboxes();
-    document.querySelectorAll(".touch_closing_div").forEach(div => {
-      div.style.display = "block";
-    });
-    idAttribute = this.getAttribute("timelineItemID");
-    document.querySelector(`[itemID="${idAttribute}"]`).style.display = "block";
-    document.querySelector("body").classList.add("mobile_hide_overflow");
+
+    // Adding details to the infobox.
+    document.querySelector(
+        ".infobox_image"
+    ).src = `elements/${fatality.firstname}.svg`;
+    document.querySelector(".infobox_name").innerHTML = fatality.namesvg;
+    document.querySelector(".infobox_birth_date").innerHTML +=
+        renderedBirthDate || fatality.birth || "Unknown";
+    document.querySelector(".infobox_death_date").innerHTML +=
+        renderedDeathDate || fatality.death;
+    document.querySelector(".infobox_story").innerHTML += fatality.story;
+    document.querySelector(".infobox_death_cause").innerHTML +=
+        fatality.causeofdeath;
+
+    // hideAllInfoboxes();
+    // document.querySelectorAll(".touch_closing_div").forEach(div => {
+    //   div.style.display = "block";
+    // });
+    // idAttribute = this.getAttribute("timelineItemID");
+    // document.querySelector(`[itemID="${idAttribute}"]`).style.display = "block";
+    // document.querySelector("body").classList.add("mobile_hide_overflow");
   }
 
   // Adds +1 to the fatalityIndex, so the next person in the array will be used next.

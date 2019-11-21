@@ -283,7 +283,6 @@ footer {
 .infobox {
   width: 400px;
   height: 0;
-  display: none;
   font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
 }
@@ -319,7 +318,7 @@ footer {
   opacity: 0;
   margin: 10px 0;
   animation-name: fade_in_kf;
-  animation-delay: 3s;
+  animation-delay: 1s;
   animation-duration: 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
