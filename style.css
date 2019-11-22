@@ -49,7 +49,6 @@ body {
   align-items: center;
 }
 
-
 footer {
   width: 100%;
   background-color: var(--paper-color);
@@ -166,17 +165,36 @@ footer {
 
 .book_container {
   box-sizing: border-box;
-  background-image: url("elements/Book_v2.svg");
+  background-image: url("elements/Book_v1.svg");
   background-size: cover;
-  max-width: 1200px;
+  background-repeat: no-repeat;
+  width: calc(100vh * 1.4);
   margin: 0 auto;
-  height: 4430px;
-  padding-top: 170px;
-  transform: rotate3d(1, 1, 1, 3deg);
+  height: 100vh;
+  /*transform: rotate3d(1, 1, 1, 3deg);*/
 }
 
-.book {
-  transform: rotate3d(1, 1, 1, 1deg);
+.book_content_container {
+  margin-top: 70px;
+  display: flex;
+}
+
+.book_timeline {
+  padding-top: 20px;
+  height: 80vh;
+  width: 43%;
+  padding-left: 3%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.book_infobox {
+  padding-top: 20px;
+  height: 80vh;
+  width: 43%;
+  padding-left: 3%;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .timeline_item {
@@ -264,7 +282,6 @@ footer {
 .infobox {
   width: 400px;
   height: 0;
-  display: none;
   font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
 }
@@ -300,7 +317,7 @@ footer {
   opacity: 0;
   margin: 10px 0;
   animation-name: fade_in_kf;
-  animation-delay: 3s;
+  animation-delay: 1s;
   animation-duration: 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -401,7 +418,6 @@ footer h3 {
   }
 }
 
-
 /* ----- INTERSECTION OBSERVER ----- */
 
 .observation_content {
@@ -437,7 +453,6 @@ footer h3 {
 .observe_this.fade_in.visible {
   opacity: 1;
 }
-
 
 /* ----- MEDIA QUERIES ----- */
 
@@ -519,7 +534,7 @@ footer h3 {
 
   .touch_closing_div {
     display: none;
-    background-color: rgba(155, 155, 155, .5);
+    background-color: rgba(155, 155, 155, 0.5);
   }
 
   /* ----- HELPING CLASSES ----- */
@@ -532,7 +547,7 @@ footer h3 {
     padding: 0;
   }
 
-/* ----- RULES ----- */
+  /* ----- RULES ----- */
 
   .rules {
     padding-bottom: 100px;
@@ -553,8 +568,7 @@ footer h3 {
     width: 20%;
   }
 
-
-/* ----- FOOTER ----- */
+  /* ----- FOOTER ----- */
   #bloodstain {
     left: auto;
     right: 0;
@@ -564,8 +578,6 @@ footer h3 {
   #bloodstain svg {
     height: 100px;
   }
-
-
 }
 
 @media screen and (max-width: 767px) {
@@ -578,7 +590,6 @@ footer h3 {
     width: 120px;
   }
 }
-
 
 @media screen and (max-width: 600px) {
   /* ----- RULES ----- */
@@ -602,7 +613,7 @@ footer h3 {
     bottom: auto;
     right: 0;
     height: 100px;
-    opacity: .5;
+    opacity: 0.5;
   }
 
   .bloodstain_note svg {

@@ -55,23 +55,17 @@ async function getTimelineJson() {
 
 // Fetching the necessary SVGs (currently only the animated names) for each person found in the json fetched before.
 function fetchSVGs(deathArray) {
-
   // Fetch specific SVGs we need
   const headlineSVG = fetch("elements/Headline_name.svg").then(r => r.text());
   const appleSVG = fetch("elements/Apple_name.svg").then(r => r.text());
   const bloodStainSVG = fetch("elements/blood.svg").then(r => r.text());
 
-  Promise
-      .all([headlineSVG, appleSVG, bloodStainSVG])
-      .then(
-          function (responses) {
-            const [headlineSVG, appleSVG, bloodStainSVG] = responses;
-            headline = headlineSVG;
-            headlineApple = appleSVG;
-            bloodStain = bloodStainSVG;
-          }
-      );
-
+  Promise.all([headlineSVG, appleSVG, bloodStainSVG]).then(function(responses) {
+    const [headlineSVG, appleSVG, bloodStainSVG] = responses;
+    headline = headlineSVG;
+    headlineApple = appleSVG;
+    bloodStain = bloodStainSVG;
+  });
 
   // Fetch names from elements-folder, based on first names in the json.
   deathArray.forEach(fatality => {
@@ -99,8 +93,8 @@ function start(deathArray) {
   const musicButton = document.querySelector(".music");
   const music = document.querySelector("#l_theme");
 
-    const musicOnButton = musicButton.querySelector(".music_on_button");
-    const musicOffButton = musicButton.querySelector(".music_off_button");
+  const musicOnButton = musicButton.querySelector(".music_on_button");
+  const musicOffButton = musicButton.querySelector(".music_off_button");
 
   let musicIsPlaying = false;
 
@@ -108,13 +102,13 @@ function start(deathArray) {
     if (!musicIsPlaying) {
       music.play();
       musicIsPlaying = true;
-        musicOnButton.style.display = "block";
-        musicOffButton.style.display = "none";
+      musicOnButton.style.display = "block";
+      musicOffButton.style.display = "none";
     } else {
       music.pause();
       musicIsPlaying = false;
-        musicOnButton.style.display = "none";
-        musicOffButton.style.display = "block";
+      musicOnButton.style.display = "none";
+      musicOffButton.style.display = "block";
     }
   });
 
@@ -144,11 +138,11 @@ function showTimeline(deathArray, getFatalityIndex) {
 
   // Adding details to the item on the timeline.
   timelineTemplate
-      .querySelector(".fatality_item_container")
-      .setAttribute("timelineItemID", `${itemID}`);
-  timelineTemplate
-    .querySelector(".infobox")
-    .setAttribute("itemID", `${itemID}`);
+    .querySelector(".fatality_item_container")
+    .setAttribute("timelineItemID", `${itemID}`);
+  // timelineTemplate
+  //   .querySelector(".infobox")
+  //   .setAttribute("itemID", `${itemID}`);
 
   timelineTemplate
     .querySelector(".fatality_item")
@@ -170,47 +164,35 @@ function showTimeline(deathArray, getFatalityIndex) {
     ).style.height = `${lineLength}px`;
   }
 
-  // Adding details to the infobox.
-  timelineTemplate.querySelector(
-    ".infobox_image"
-  ).src = `elements/${fatality.firstname}.svg`;
-  timelineTemplate.querySelector(".infobox_name").innerHTML = fatality.namesvg;
-  timelineTemplate.querySelector(".infobox_birth_date").innerHTML +=
-    renderedBirthDate || fatality.birth || "Unknown";
-  timelineTemplate.querySelector(".infobox_death_date").innerHTML +=
-    renderedDeathDate || fatality.death;
-  timelineTemplate.querySelector(".infobox_story").innerHTML += fatality.story;
-  timelineTemplate.querySelector(".infobox_death_cause").innerHTML +=
-    fatality.causeofdeath;
-
-  timelineTemplate
-    .querySelector(".infobox_name")
-    .addEventListener("animationend", function() {});
-
   // Adding the whole item to the HTML using the template.
-  document.querySelector(".book").appendChild(timelineTemplate);
+  document.querySelector(".book_timeline").appendChild(timelineTemplate);
 
   let idAttribute;
 
-  // Adds hover function to devices that have a mouse pointer/is not touch.
-  if (!isTouchDeviceFunction()) {
-    document
-      .querySelector(".book")
-      .lastElementChild.addEventListener("mouseover", displayInfobox);
-  } else {
-    document
-      .querySelector(".book")
-      .lastElementChild.addEventListener("click", displayInfobox);
-  }
+  document
+    .querySelector(".book_timeline")
+    .lastElementChild.addEventListener("click", displayInfobox);
 
   function displayInfobox() {
-    hideAllInfoboxes();
-    document.querySelectorAll(".touch_closing_div").forEach(div => {
-      div.style.display = "block";
-    });
-    idAttribute = this.getAttribute("timelineItemID");
-    document.querySelector(`[itemID="${idAttribute}"]`).style.display = "block";
-    document.querySelector("body").classList.add("mobile_hide_overflow");
+    const infoboxTemplate = document
+      .querySelector(".infobox_template")
+      .content.cloneNode(true);
+
+    // Adding details to the infobox.
+    infoboxTemplate.querySelector(
+      ".infobox_image_container"
+    ).innerHTML = `<img class="infobox_image" src="elements/${fatality.firstname}.svg"  alt="Image of character">`;
+    infoboxTemplate.querySelector(".infobox_name").innerHTML = fatality.namesvg;
+    infoboxTemplate.querySelector(".infobox_birth_date").innerHTML +=
+      renderedBirthDate || fatality.birth || "Unknown";
+    infoboxTemplate.querySelector(".infobox_death_date").innerHTML +=
+      renderedDeathDate || fatality.death;
+    infoboxTemplate.querySelector(".infobox_story").innerHTML += fatality.story;
+    infoboxTemplate.querySelector(".infobox_death_cause").innerHTML +=
+      fatality.causeofdeath;
+
+    document.querySelector(".book_infobox").innerHTML = "";
+    document.querySelector(".book_infobox").appendChild(infoboxTemplate);
   }
 
   // Adds +1 to the fatalityIndex, so the next person in the array will be used next.
@@ -220,10 +202,8 @@ function showTimeline(deathArray, getFatalityIndex) {
   // We might be able to do this with an "animationend" listener instead, to be sure the first name is written
   // before the next starts appearing?
   if (deathArray.length > fatalityIndex) {
-      showTimeline(deathArray, fatalityIndex);
-  }
-
-  else {
+    showTimeline(deathArray, fatalityIndex);
+  } else {
     observeTimeline();
   }
 }
@@ -231,19 +211,19 @@ function showTimeline(deathArray, getFatalityIndex) {
 function observeTimeline() {
   // ----- INTERSECTION OBSERVER -----
 
-// From slides, and edited for our use.
-  const elms = document.querySelectorAll('.observe_this');
+  // From slides, and edited for our use.
+  const elms = document.querySelectorAll(".observe_this");
 
   const config = {
     root: null,
-    rootMargin: '0px',
-    threshold: [0, .25, .75, 1]
+    rootMargin: "0px",
+    threshold: [0, 0.25, 0.75, 1]
   };
 
-  let observer = new IntersectionObserver((entries) => {
+  let observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (entry.intersectionRatio > .75) {
-        entry.target.classList.add('visible');
+      if (entry.intersectionRatio > 0.75) {
+        entry.target.classList.add("visible");
       }
     });
   }, config);
@@ -253,9 +233,8 @@ function observeTimeline() {
   });
 }
 
-document
-  .querySelectorAll(".touch_closing_div").forEach(div => {
-    div.addEventListener("click", hideAllInfoboxes);
+document.querySelectorAll(".touch_closing_div").forEach(div => {
+  div.addEventListener("click", hideAllInfoboxes);
 });
 
 function hideAllInfoboxes() {
