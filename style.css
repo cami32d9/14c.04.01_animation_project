@@ -165,12 +165,12 @@ footer {
 /* ----- BOOK ----- */
 
 .book_container {
+  z-index: 1;
   box-sizing: border-box;
   background-image: url("elements/Book_v1.svg");
   background-size: cover;
   background-repeat: no-repeat;
   width: calc(100vh * 1.4);
-  margin: 0 auto;
   height: 100vh;
   /*transform: rotate3d(1, 1, 1, 3deg);*/
 }
@@ -274,10 +274,6 @@ footer {
   left: 0;
   width: 100vw;
   height: 100vh;
-}
-
-.close-2 {
-  height: 100%;
 }
 
 .infobox {
@@ -498,7 +494,6 @@ footer h3 {
     box-sizing: border-box;
     padding: 20px;
     text-align: center;
-    z-index: 101;
     position: fixed;
     top: 5vh;
     left: 10vw;

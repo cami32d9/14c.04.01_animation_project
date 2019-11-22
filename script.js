@@ -248,19 +248,12 @@ function observeTimeline() {
 }
 
 document
-  .querySelectorAll(".touch_closing_div").forEach(div => {
-    div.addEventListener("click", hideAllInfoboxes);
+  .querySelector(".touch_closing_div").addEventListener("click", function() {
+    document.querySelectorAll(".infobox div").forEach(div => {
+      div.innerHTML = "";
+      console.log("I'm closing");
+    })
 });
-
-function hideAllInfoboxes() {
-  document.querySelectorAll(".infobox").forEach(infobox => {
-    infobox.style.display = "none";
-    document.querySelectorAll(".touch_closing_div").forEach(div => {
-      div.style.display = "none";
-    });
-    document.querySelector("body").classList.remove("mobile_hide_overflow");
-  });
-}
 
 function calculateTimelineGap(deathArray, thisFatalityIndex) {
   let daysBetweenDeaths;
