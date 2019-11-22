@@ -50,7 +50,6 @@ body {
   align-items: center;
 }
 
-
 footer {
   width: 100%;
   background-color: var(--paper-color);
@@ -206,8 +205,11 @@ footer {
   margin: 10px 0;
 }
 
+.timeline_text_container {
+    cursor: pointer;
+}
+
 .fatality_item_container {
-  cursor: default;
   max-width: 100%;
   margin: 0 10%;
 }
@@ -554,7 +556,7 @@ footer h3 {
     padding: 0;
   }
 
-/* ----- RULES ----- */
+  /* ----- RULES ----- */
 
   .rules {
     padding-bottom: 100px;
@@ -575,8 +577,7 @@ footer h3 {
     width: 20%;
   }
 
-
-/* ----- FOOTER ----- */
+  /* ----- FOOTER ----- */
   #bloodstain {
     left: auto;
     right: 0;
@@ -586,8 +587,6 @@ footer h3 {
   #bloodstain svg {
     height: 100px;
   }
-
-
 }
 
 @media screen and (max-width: 767px) {
@@ -600,7 +599,6 @@ footer h3 {
     width: 120px;
   }
 }
-
 
 @media screen and (max-width: 600px) {
   /* ----- RULES ----- */

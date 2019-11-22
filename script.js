@@ -100,8 +100,8 @@ function start(deathArray) {
   const musicButton = document.querySelector(".music");
   const music = document.querySelector("#l_theme");
 
-    const musicOnButton = musicButton.querySelector(".music_on_button");
-    const musicOffButton = musicButton.querySelector(".music_off_button");
+  const musicOnButton = musicButton.querySelector(".music_on_button");
+  const musicOffButton = musicButton.querySelector(".music_off_button");
 
   let musicIsPlaying = false;
 
@@ -109,13 +109,13 @@ function start(deathArray) {
     if (!musicIsPlaying) {
       music.play();
       musicIsPlaying = true;
-        musicOnButton.style.display = "block";
-        musicOffButton.style.display = "none";
+      musicOnButton.style.display = "block";
+      musicOffButton.style.display = "none";
     } else {
       music.pause();
       musicIsPlaying = false;
-        musicOnButton.style.display = "none";
-        musicOffButton.style.display = "block";
+      musicOnButton.style.display = "none";
+      musicOffButton.style.display = "block";
     }
   });
 
@@ -145,8 +145,8 @@ function showTimeline(deathArray, getFatalityIndex) {
 
   // Adding details to the item on the timeline.
   timelineTemplate
-      .querySelector(".fatality_item_container")
-      .setAttribute("timelineItemID", `${itemID}`);
+    .querySelector(".fatality_item_container")
+    .setAttribute("timelineItemID", `${itemID}`);
   // timelineTemplate
   //   .querySelector(".infobox")
   //   .setAttribute("itemID", `${itemID}`);
@@ -176,35 +176,30 @@ function showTimeline(deathArray, getFatalityIndex) {
 
   let idAttribute;
 
-    document
-      .querySelector(".book_timeline")
-      .lastElementChild.addEventListener("click", displayInfobox);
-
-
-
+  document
+    .querySelector(".book_timeline")
+    .lastElementChild.addEventListener("click", displayInfobox);
 
   function displayInfobox() {
-
     const infoboxTemplate = document
-        .querySelector(".infobox_template")
-        .content.cloneNode(true);
+      .querySelector(".infobox_template")
+      .content.cloneNode(true);
 
     // Adding details to the infobox.
     infoboxTemplate.querySelector(
-        ".infobox_image_container"
+      ".infobox_image_container"
     ).innerHTML = `<img class="infobox_image" src="elements/${fatality.firstname}.svg"  alt="Image of character">`;
     infoboxTemplate.querySelector(".infobox_name").innerHTML = fatality.namesvg;
     infoboxTemplate.querySelector(".infobox_birth_date").innerHTML +=
-        renderedBirthDate || fatality.birth || "Unknown";
+      renderedBirthDate || fatality.birth || "Unknown";
     infoboxTemplate.querySelector(".infobox_death_date").innerHTML +=
-        renderedDeathDate || fatality.death;
+      renderedDeathDate || fatality.death;
     infoboxTemplate.querySelector(".infobox_story").innerHTML += fatality.story;
     infoboxTemplate.querySelector(".infobox_death_cause").innerHTML +=
-        fatality.causeofdeath;
+      fatality.causeofdeath;
 
     document.querySelector(".book_infobox").innerHTML = "";
     document.querySelector(".book_infobox").appendChild(infoboxTemplate);
-
   }
 
   // Adds +1 to the fatalityIndex, so the next person in the array will be used next.
@@ -214,10 +209,8 @@ function showTimeline(deathArray, getFatalityIndex) {
   // We might be able to do this with an "animationend" listener instead, to be sure the first name is written
   // before the next starts appearing?
   if (deathArray.length > fatalityIndex) {
-      showTimeline(deathArray, fatalityIndex);
-  }
-
-  else {
+    showTimeline(deathArray, fatalityIndex);
+  } else {
     observeTimeline();
   }
 }
@@ -225,19 +218,19 @@ function showTimeline(deathArray, getFatalityIndex) {
 function observeTimeline() {
   // ----- INTERSECTION OBSERVER -----
 
-// From slides, and edited for our use.
-  const elms = document.querySelectorAll('.observe_this');
+  // From slides, and edited for our use.
+  const elms = document.querySelectorAll(".observe_this");
 
   const config = {
     root: null,
-    rootMargin: '0px',
-    threshold: [0, .25, .75, 1]
+    rootMargin: "0px",
+    threshold: [0, 0.25, 0.75, 1]
   };
 
   let observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.intersectionRatio > .75) {
-        entry.target.classList.add('visible');
+        entry.target.classList.add("visible");
       }
     });
   }, config);
