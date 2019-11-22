@@ -474,25 +474,25 @@ footer h3 {
 
 @media screen and (max-width: 1200px) {
   .book_container {
-    padding-top: 50px;
+    height: 70vw;
+    width: 90vw;
     background-image: none;
-    padding-bottom: 0;
+    padding: 0;
     background-color: var(--paper-color);
-    margin: 5%;
-    height: 3800px;
   }
 
-  .fatality_item_container {
-    margin: 0 3%;
+  .book_content_container {
+    margin: 2% 0;
+  }
+
+  .book_timeline {
+    padding: 0;
+    width: 50%;
   }
 }
 
-@media screen and (max-width: 899px) {
+@media screen and (max-width: 1099px) {
   /* ----- INFOBOX ----- */
-
-  .book_container {
-    height: 3300px;
-  }
 
   .infobox {
     box-sizing: border-box;
