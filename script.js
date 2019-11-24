@@ -2,15 +2,15 @@
 
 document.addEventListener("DOMContentLoaded", getTimelineJson);
 
-let fatalityIndex;
-
 // Specific SVGs loaded to the script
 let headline;
 let headlineApple;
 let bloodStain;
 
-// Variable that will help load all name SVGs, as long as the variable is less than the number of names
+// Indexes that make sure that functions loop over all objects in the deathArray.
 let svgIndex = 0;
+let fatalityIndex;
+
 
 // ----- CHECKING IF TOUCH- OR MOUSE DEVICE -----
 
@@ -35,6 +35,7 @@ function isTouchDevice() {
   var query = ["(", prefixes.join("touch-enabled),("), "heartz", ")"].join("");
   return mq(query);
 }
+
 
 // ----- FETCHING DATA -----
 
@@ -83,6 +84,7 @@ function fetchSVGs(deathArray) {
     });
   });
 }
+
 
 function start(deathArray) {
 
@@ -135,8 +137,6 @@ function showTimeline(deathArray, getFatalityIndex) {
   const fatality = deathArray[fatalityIndex];
 
   let daysBetweenDeaths = calculateTimelineGap(deathArray, fatalityIndex);
-
-  renderDate(fatality.death);
 
   let renderedBirthDate = renderDate(fatality.birth);
   let renderedDeathDate = renderDate(fatality.death);
@@ -236,8 +236,11 @@ function hideInfobox() {
   document.querySelector(".music").style.opacity = "1";
 }
 
+
+
+// ----- HELPING FUNCTIONS -----
+
 function observeTimeline() {
-  // ----- INTERSECTION OBSERVER -----
 
   // From slides, and edited for our use.
   const elms = document.querySelectorAll(".observe_this");
@@ -261,6 +264,8 @@ function observeTimeline() {
   });
 }
 
+
+// Calculates the number of days between each death.
 function calculateTimelineGap(deathArray, thisFatalityIndex) {
   let daysBetweenDeaths;
   let thisFatality = deathArray[thisFatalityIndex];
