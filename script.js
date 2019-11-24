@@ -2,28 +2,22 @@
 
 document.addEventListener("DOMContentLoaded", getTimelineJson);
 
-let itemID = 0;
 let fatalityIndex;
 
+// Specific SVGs loaded to the script
 let headline;
 let headlineApple;
 let bloodStain;
+
+// Variable that will help load all name SVGs, as long as the variable is less than the number of names
 let svgIndex = 0;
 
 // ----- CHECKING IF TOUCH- OR MOUSE DEVICE -----
 
-const touchDeviceClass = getTouchDeviceClass();
-
-function getTouchDeviceClass() {
-  return isTouchDeviceFunction()
-    ? "touch_device_item"
-    : "not_touch_device_item";
-}
-
 // Function that checks if the device is a touch device or not.
 // bolmaster2, updated 2018.
 // https://stackoverflow.com/questions/4817029/whats-the-best-way-to-detect-a-touch-screen-device-using-javascript/19299994#19299994
-function isTouchDeviceFunction() {
+function isTouchDevice() {
   var prefixes = " -webkit- -moz- -o- -ms- ".split(" ");
   var mq = function(query) {
     return window.matchMedia(query).matches;
@@ -92,19 +86,23 @@ function fetchSVGs(deathArray) {
 
 function start(deathArray) {
 
+  if (isTouchDevice()) {
+    console.log("I'm touching");
+    document.body.classList.add("touch_body");
+  }
+
+  // Inserts the specific SVGs to the dom
   document.querySelector(".headline").innerHTML = headline;
   document.querySelector(".apple").innerHTML = headlineApple;
   document.querySelector(".bloodstain_note").innerHTML = bloodStain;
   document.querySelector("#bloodstain").innerHTML = bloodStain;
 
+  // Activates music button
   const musicButton = document.querySelector(".music");
   const music = document.querySelector("#l_theme");
-
   const musicOnButton = musicButton.querySelector(".music_on_button");
   const musicOffButton = musicButton.querySelector(".music_off_button");
-
   let musicIsPlaying = false;
-
   musicButton.addEventListener("click", function() {
     if (!musicIsPlaying) {
       music.play();
@@ -141,19 +139,6 @@ function showTimeline(deathArray, getFatalityIndex) {
     .querySelector(".timeline_template")
     .content.cloneNode(true);
 
-  itemID++;
-
-  // Adding details to the item on the timeline.
-  timelineTemplate
-    .querySelector(".fatality_item_container")
-    .setAttribute("timelineItemID", `${itemID}`);
-  // timelineTemplate
-  //   .querySelector(".infobox")
-  //   .setAttribute("itemID", `${itemID}`);
-
-  timelineTemplate
-    .querySelector(".fatality_item")
-    .classList.add(touchDeviceClass);
   timelineTemplate.querySelector(
     ".timeline_icon"
   ).src = `elements/${fatality.deathcategory}.svg`;
@@ -200,6 +185,17 @@ function showTimeline(deathArray, getFatalityIndex) {
 
     document.querySelector(".book_infobox").innerHTML = "";
     document.querySelector(".book_infobox").appendChild(infoboxTemplate);
+
+    if (document.body.classList.contains("touch_body")) {
+    document.querySelector(".touch_body").style.overflowY = "hidden";
+
+      document.querySelectorAll(".close_infobox_div").forEach(div => {
+        div.style.display = "block";
+        div.style.backgroundColor = "rgb(0,0,0,.2)";
+      });
+
+    document.querySelector(".music").style.display = "none";
+  }
   }
 
   // Adds +1 to the fatalityIndex, so the next person in the array will be used next.
@@ -241,10 +237,28 @@ function observeTimeline() {
 }
 
 document
-  .querySelector(".touch_closing_div").addEventListener("click", function() {
+  .querySelectorAll(".close_infobox_div").forEach(div => {
+    div.addEventListener("click", function() {
+
+      document
+          .querySelectorAll(".close_infobox_div").forEach(div => {
+        div.style.backgroundColor = "transparent";
+      });
+
     document.querySelectorAll(".infobox div").forEach(div => {
       div.innerHTML = "";
-      console.log("I'm closing");
+      });
+
+      if (document.body.classList.contains("touch_body")) {
+        document.querySelector(".infobox").style.display = "none";
+        document.querySelector(".touch_body").style.overflowY = "scroll";
+
+        // Displays music button again, but without animation.
+        document.querySelector(".music").style.display = "block";
+        document.querySelector(".music").style.animation = "none";
+        document.querySelector(".music").style.opacity = "1";
+
+    }
     })
 });
 
