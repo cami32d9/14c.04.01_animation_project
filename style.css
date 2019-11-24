@@ -510,7 +510,6 @@ footer h3 {
 }
 
 @media screen and (max-width: 899px) {
-
   /* ----- CLOSING BUTTON ----- */
   .close_button {
     position: fixed;
@@ -553,8 +552,9 @@ footer h3 {
     overflow-y: scroll;
   }
 
-  .close_infobox_div.mobile {
-    display: block;
+  .close_infobox_div {
+   display: none;
+  background-color: rgb(0,0,0,.2);
   }
 
   .infobox_image {
@@ -575,6 +575,14 @@ footer h3 {
 
   .mobile_hide_overflow {
     overflow: hidden;
+  }
+
+  .mobile_hide {
+    display: none;
+  }
+
+  .mobile_show {
+    display: block;
   }
 
   .headline {

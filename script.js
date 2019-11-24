@@ -165,8 +165,6 @@ function showTimeline(deathArray, getFatalityIndex) {
   // Adding the whole item to the HTML using the template.
   document.querySelector(".book_timeline").appendChild(timelineTemplate);
 
-  let idAttribute;
-
   document
     .querySelector(".book_timeline")
     .lastElementChild.addEventListener("click", displayInfobox);
@@ -191,18 +189,18 @@ function showTimeline(deathArray, getFatalityIndex) {
 
     document.querySelector(".book_infobox").innerHTML = "";
     document.querySelector(".book_infobox").appendChild(infoboxTemplate);
+    document.body.classList.add("mobile_hide_overflow");
+
+    // Specifics for mobile - showing and hiding music button and closing button, and hiding overflow on body.
+    document.querySelector(".close_button").classList.add("mobile_show");
+    document.querySelector(".music").classList.add("mobile_hide");
 
     if (document.body.classList.contains("touch_body")) {
-      document.querySelector(".close_button").style.display = "block";
-    document.querySelector(".touch_body").style.overflowY = "hidden";
-
       document.querySelectorAll(".close_infobox_div").forEach(div => {
         div.style.display = "block";
-        div.style.backgroundColor = "rgb(0,0,0,.2)";
       });
-
-    document.querySelector(".music").style.display = "none";
   }
+
   }
 
   // Adds +1 to the fatalityIndex, so the next person in the array will be used next.
@@ -216,6 +214,26 @@ function showTimeline(deathArray, getFatalityIndex) {
   } else {
     observeTimeline();
   }
+}
+
+function hideInfobox() {
+
+  document
+      .querySelectorAll(".close_infobox_div").forEach(div => {
+    div.style.display = "none";
+  });
+
+  document.querySelector(".infobox div").innerHTML = "";
+  document.querySelector(".infobox").style.display = "none";
+
+  // Specifics for mobile - showing and hiding music button and closing button, and hiding overflow on body.
+  document.body.classList.remove("mobile_hide_overflow");
+  document.querySelector(".close_button").classList.remove("mobile_show");
+
+  // Displays music button again, but without animation.
+  document.querySelector(".music").classList.remove("mobile_hide");
+  document.querySelector(".music").style.animation = "none";
+  document.querySelector(".music").style.opacity = "1";
 }
 
 function observeTimeline() {
@@ -241,31 +259,6 @@ function observeTimeline() {
   elms.forEach(elem => {
     observer.observe(elem);
   });
-}
-
-
-
-function hideInfobox() {
-  document
-      .querySelectorAll(".close_infobox_div").forEach(div => {
-    div.style.backgroundColor = "transparent";
-  });
-
-  document.querySelectorAll(".infobox div").forEach(div => {
-    div.innerHTML = "";
-  });
-
-  if (document.body.classList.contains("touch_body")) {
-    document.querySelector(".infobox").style.display = "none";
-    document.querySelector(".touch_body").style.overflowY = "scroll";
-    document.querySelector(".close_button").style.display = "none";
-
-    // Displays music button again, but without animation.
-    document.querySelector(".music").style.display = "block";
-    document.querySelector(".music").style.animation = "none";
-    document.querySelector(".music").style.opacity = "1";
-
-  }
 }
 
 function calculateTimelineGap(deathArray, thisFatalityIndex) {
