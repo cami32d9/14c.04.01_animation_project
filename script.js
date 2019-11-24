@@ -87,9 +87,15 @@ function fetchSVGs(deathArray) {
 function start(deathArray) {
 
   if (isTouchDevice()) {
-    console.log("I'm touching");
     document.body.classList.add("touch_body");
   }
+
+  document
+      .querySelectorAll(".close_infobox_div").forEach(div => {
+    div.addEventListener("click", hideInfobox);
+  });
+
+  document.querySelector(".close_button").addEventListener("click", hideInfobox);
 
   // Inserts the specific SVGs to the dom
   document.querySelector(".headline").innerHTML = headline;
@@ -187,6 +193,7 @@ function showTimeline(deathArray, getFatalityIndex) {
     document.querySelector(".book_infobox").appendChild(infoboxTemplate);
 
     if (document.body.classList.contains("touch_body")) {
+      document.querySelector(".close_button").style.display = "block";
     document.querySelector(".touch_body").style.overflowY = "hidden";
 
       document.querySelectorAll(".close_infobox_div").forEach(div => {
@@ -236,31 +243,30 @@ function observeTimeline() {
   });
 }
 
-document
-  .querySelectorAll(".close_infobox_div").forEach(div => {
-    div.addEventListener("click", function() {
 
-      document
-          .querySelectorAll(".close_infobox_div").forEach(div => {
-        div.style.backgroundColor = "transparent";
-      });
 
-    document.querySelectorAll(".infobox div").forEach(div => {
-      div.innerHTML = "";
-      });
+function hideInfobox() {
+  document
+      .querySelectorAll(".close_infobox_div").forEach(div => {
+    div.style.backgroundColor = "transparent";
+  });
 
-      if (document.body.classList.contains("touch_body")) {
-        document.querySelector(".infobox").style.display = "none";
-        document.querySelector(".touch_body").style.overflowY = "scroll";
+  document.querySelectorAll(".infobox div").forEach(div => {
+    div.innerHTML = "";
+  });
 
-        // Displays music button again, but without animation.
-        document.querySelector(".music").style.display = "block";
-        document.querySelector(".music").style.animation = "none";
-        document.querySelector(".music").style.opacity = "1";
+  if (document.body.classList.contains("touch_body")) {
+    document.querySelector(".infobox").style.display = "none";
+    document.querySelector(".touch_body").style.overflowY = "scroll";
+    document.querySelector(".close_button").style.display = "none";
 
-    }
-    })
-});
+    // Displays music button again, but without animation.
+    document.querySelector(".music").style.display = "block";
+    document.querySelector(".music").style.animation = "none";
+    document.querySelector(".music").style.opacity = "1";
+
+  }
+}
 
 function calculateTimelineGap(deathArray, thisFatalityIndex) {
   let daysBetweenDeaths;
